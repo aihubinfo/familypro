@@ -1,0 +1,55 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { DEFAULT_LANG, type Lang } from '../../lib/i18n';
+
+interface RedirectTarget {
+  lang: Lang;
+  slug: string;
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  const byTranslation = new Map<string, CollectionEntry<'blog'>[]>();
+
+  for (const post of posts) {
+    const key = post.data.translationKey;
+    byTranslation.set(key, [...(byTranslation.get(key) ?? []), post]);
+  }
+
+  return Array.from(byTranslation.values()).map((items) => {
+    const pick =
+      items.find((item) => item.data.locale === DEFAULT_LANG) ??
+      items[0];
+    const slug = pick.id.split('/').pop() ?? pick.id;
+
+    return {
+      params: { slug },
+      props: {
+        target: {
+          lang: pick.data.locale,
+          slug,
+        } satisfies RedirectTarget,
+      },
+    };
+  });
+}
+
+const { target } = Astro.props;
+const rawBaseUrl = import.meta.env.BASE_URL;
+const baseUrl = rawBaseUrl.endsWith('/') ? rawBaseUrl : `${rawBaseUrl}/`;
+const redirectTo = `${baseUrl}${target.lang}/blog/${target.slug}/`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting...</title>
+    <link rel="canonical" href={redirectTo} />
+    <meta http-equiv="refresh" content={`0; url=${redirectTo}`} />
+  </head>
+  <body>
+    <p>Redirecting to <a href={redirectTo}>{redirectTo}</a></p>
+  </body>
+</html>

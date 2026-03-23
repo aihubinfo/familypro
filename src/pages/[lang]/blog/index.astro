@@ -1,0 +1,109 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { DEFAULT_LANG, LANGS, LANG_LABEL, LOCALE_BY_LANG, SITE_NAME_BY_LANG, UI, isLang } from '../../../lib/i18n';
+
+export function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const langParam = Astro.params.lang;
+if (!langParam || !isLang(langParam)) {
+  throw new Error(`Unsupported language: ${langParam}`);
+}
+const lang = langParam;
+const ui = UI[lang];
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft && data.locale === lang)).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+
+const rawBaseUrl = import.meta.env.BASE_URL;
+const baseUrl = rawBaseUrl.endsWith('/') ? rawBaseUrl : `${rawBaseUrl}/`;
+const siteBase = Astro.site ?? new URL(Astro.url.origin);
+const canonical = new URL(`${baseUrl}${lang}/blog/`, siteBase).toString();
+
+const alternates = LANGS.map((code) => ({
+  hrefLang: LOCALE_BY_LANG[code],
+  href: new URL(`${baseUrl}${code}/blog/`, siteBase).toString(),
+}));
+alternates.push({ hrefLang: 'x-default', href: new URL(`${baseUrl}${DEFAULT_LANG}/blog/`, siteBase).toString() });
+
+const languageLinks = LANGS.map((code) => ({
+  label: LANG_LABEL[code],
+  href: `${baseUrl}${code}/blog/`,
+  active: code === lang,
+}));
+
+const title = `${ui.allPosts} | ${SITE_NAME_BY_LANG[lang]}`;
+const description = `${ui.allPosts} - ${SITE_NAME_BY_LANG[lang]}`;
+
+const getPostSlug = (id: string) => id.split('/').pop() ?? id;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  lang={lang}
+  localeCode={LOCALE_BY_LANG[lang]}
+  siteName={SITE_NAME_BY_LANG[lang]}
+  homeLabel={ui.home}
+  blogLabel={ui.blog}
+  footerText={ui.footer}
+  navHomeHref={`${baseUrl}${lang}/`}
+  navBlogHref={`${baseUrl}${lang}/blog/`}
+  languageLabel={ui.languageSwitch}
+  languageLinks={languageLinks}
+  alternates={alternates}
+>
+  <h1>{ui.allPosts}</h1>
+
+  {posts.length === 0 ? (
+    <p>{ui.noPosts}</p>
+  ) : (
+    <ul class="post-list">
+      {posts.map((post) => (
+        <li class="card">
+          <a href={`${baseUrl}${lang}/blog/${getPostSlug(post.id)}/`}>
+            <h2>{post.data.title}</h2>
+          </a>
+          <p>{post.data.description}</p>
+          <p class="meta">
+            {post.data.pubDate.toISOString().slice(0, 10)} · {post.data.service} · {post.data.tags.join(' / ')}
+          </p>
+        </li>
+      ))}
+    </ul>
+  )}
+</BaseLayout>
+
+<style>
+  .post-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .card {
+    background: #ffffff;
+    border: 1px solid #dbe5ef;
+    border-radius: 0.9rem;
+    padding: 1rem;
+  }
+
+  .card h2 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    margin: 0.4rem 0;
+  }
+
+  .meta {
+    color: #64748b;
+    font-size: 0.92rem;
+  }
+</style>

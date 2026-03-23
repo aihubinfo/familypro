@@ -1,0 +1,38 @@
+---
+import { DEFAULT_LANG, LANGS, LANG_LABEL, LOCALE_BY_LANG } from '../lib/i18n';
+
+const rawBaseUrl = import.meta.env.BASE_URL;
+const baseUrl = rawBaseUrl.endsWith('/') ? rawBaseUrl : `${rawBaseUrl}/`;
+const siteBase = Astro.site ?? new URL(Astro.url.origin);
+const canonical = new URL(baseUrl, siteBase).toString();
+
+const alternates = LANGS.map((lang) => ({
+  hrefLang: LOCALE_BY_LANG[lang],
+  href: new URL(`${baseUrl}${lang}/`, siteBase).toString(),
+}));
+alternates.push({ hrefLang: 'x-default', href: new URL(`${baseUrl}${DEFAULT_LANG}/`, siteBase).toString() });
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Subscription Savings Lab</title>
+    <meta name="description" content="Choose your preferred language: Chinese, English, or Japanese." />
+    <link rel="canonical" href={canonical} />
+    {alternates.map((item) => <link rel="alternate" hreflang={item.hrefLang} href={item.href} />)}
+    <meta http-equiv="refresh" content={`0; url=${baseUrl}${DEFAULT_LANG}/`} />
+  </head>
+  <body>
+    <main>
+      <h1>Language Redirect</h1>
+      <p>If you are not redirected automatically, choose a language below:</p>
+      <ul>
+        {LANGS.map((lang) => (
+          <li><a href={`${baseUrl}${lang}/`}>{LANG_LABEL[lang]}</a></li>
+        ))}
+      </ul>
+    </main>
+  </body>
+</html>
