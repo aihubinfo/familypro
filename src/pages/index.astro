@@ -1,40 +1,134 @@
 ---
-import { DEFAULT_LANG, LANGS, LANG_LABEL, LOCALE_BY_LANG } from '../lib/i18n';
-import GoogleVerification from '../components/GoogleVerification.astro';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { DEFAULT_LANG, LANGS, LANG_LABEL, LOCALE_BY_LANG, SITE_NAME_BY_LANG, UI } from '../lib/i18n';
+
+const lang = DEFAULT_LANG;
+const ui = UI[lang];
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft && data.locale === lang)).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
 
 const rawBaseUrl = import.meta.env.BASE_URL;
 const baseUrl = rawBaseUrl.endsWith('/') ? rawBaseUrl : `${rawBaseUrl}/`;
 const siteBase = Astro.site ?? new URL(Astro.url.origin);
 const canonical = new URL(baseUrl, siteBase).toString();
 
-const alternates = LANGS.map((lang) => ({
-  hrefLang: LOCALE_BY_LANG[lang],
-  href: new URL(`${baseUrl}${lang}/`, siteBase).toString(),
+const alternates = LANGS.map((code) => ({
+  hrefLang: LOCALE_BY_LANG[code],
+  href: new URL(code === lang ? baseUrl : `${baseUrl}${code}/`, siteBase).toString(),
 }));
-alternates.push({ hrefLang: 'x-default', href: new URL(`${baseUrl}${DEFAULT_LANG}/`, siteBase).toString() });
+alternates.push({ hrefLang: 'x-default', href: canonical });
+
+const languageLinks = LANGS.map((code) => ({
+  label: LANG_LABEL[code],
+  href: code === lang ? baseUrl : `${baseUrl}${code}/`,
+  active: code === lang,
+}));
+
+const title = `${SITE_NAME_BY_LANG[lang]} | AI & Streaming Subscription Guides`;
+const description = ui.heroDesc;
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_NAME_BY_LANG[lang],
+  url: canonical,
+  inLanguage: LOCALE_BY_LANG[lang],
+  description,
+};
+
+const getPostSlug = (id: string) => id.split('/').pop() ?? id;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <GoogleVerification />
-    <title>Subscription Savings Lab</title>
-    <meta name="description" content="Choose your preferred language: Chinese, English, or Japanese." />
-    <link rel="canonical" href={canonical} />
-    {alternates.map((item) => <link rel="alternate" hreflang={item.hrefLang} href={item.href} />)}
-    <meta http-equiv="refresh" content={`0; url=${baseUrl}${DEFAULT_LANG}/`} />
-  </head>
-  <body>
-    <main>
-      <h1>Language Redirect</h1>
-      <p>If you are not redirected automatically, choose a language below:</p>
-      <ul>
-        {LANGS.map((lang) => (
-          <li><a href={`${baseUrl}${lang}/`}>{LANG_LABEL[lang]}</a></li>
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  lang={lang}
+  localeCode={LOCALE_BY_LANG[lang]}
+  siteName={SITE_NAME_BY_LANG[lang]}
+  homeLabel={ui.home}
+  blogLabel={ui.blog}
+  footerText={ui.footer}
+  navHomeHref={baseUrl}
+  navBlogHref={`${baseUrl}${lang}/blog/`}
+  languageLabel={ui.languageSwitch}
+  languageLinks={languageLinks}
+  alternates={alternates}
+  jsonLd={websiteJsonLd}
+>
+  <section class="hero">
+    <p class="eyebrow">{ui.heroEyebrow}</p>
+    <h1>{ui.heroTitle}</h1>
+    <p>{ui.heroDesc}</p>
+  </section>
+
+  <section>
+    <h2>{ui.latestPosts}</h2>
+    {posts.length === 0 ? (
+      <p>{ui.noPosts}</p>
+    ) : (
+      <ul class="post-list">
+        {posts.map((post) => (
+          <li class="card">
+            <a href={`${baseUrl}${lang}/blog/${getPostSlug(post.id)}/`}>
+              <h3>{post.data.title}</h3>
+            </a>
+            <p>{post.data.description}</p>
+            <p class="meta">
+              {post.data.pubDate.toISOString().slice(0, 10)} · {post.data.tags.join(' / ')}
+            </p>
+          </li>
         ))}
       </ul>
-    </main>
-  </body>
-</html>
+    )}
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: #ffffff;
+    border: 1px solid #dbe5ef;
+    border-radius: 1rem;
+    padding: 1.2rem 1.2rem 1.1rem;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+    margin-bottom: 1.5rem;
+  }
+
+  .eyebrow {
+    margin: 0;
+    color: #0f766e;
+    font-weight: 700;
+    font-size: 0.88rem;
+  }
+
+  .post-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .card {
+    background: #ffffff;
+    border: 1px solid #dbe5ef;
+    border-radius: 0.9rem;
+    padding: 1rem 1rem 0.8rem;
+  }
+
+  .card h3 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+  }
+
+  .card p {
+    margin: 0.3rem 0;
+  }
+
+  .meta {
+    color: #64748b;
+    font-size: 0.9rem;
+  }
+</style>

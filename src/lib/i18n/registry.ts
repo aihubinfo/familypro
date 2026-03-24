@@ -24,4 +24,4 @@ export const LANGUAGE_REGISTRY = {
   },
 } as const satisfies Record<string, LanguageDescriptor>;
 
-export const DEFAULT_LANG = 'zh' as const;
+export const DEFAULT_LANG = 'en' as const;
