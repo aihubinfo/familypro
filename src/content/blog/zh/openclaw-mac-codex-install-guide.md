@@ -1,9 +1,9 @@
 ---
 locale: zh
 translationKey: openclaw-mac-codex-install-guide
-title: OpenClaw for Mac 安装与配置指南：接入 Codex 作为大模型 API
-description: 在 Mac 上安装 OpenClaw 并通过 openai-codex 接入 Codex 的完整指南，覆盖安装、OAuth 认证、默认模型配置、常见问题与排查步骤。
-summary: 一篇面向开发者的 OpenClaw 上手文章，重点讲清楚如何在 macOS 上完成安装、通过 onboarding 接入 Codex，并检查默认模型与 embeddings 配置。
+title: OpenClaw for Mac 安装指南：接入 Codex 完成配置
+description: 按最新官方文档整理的 OpenClaw for Mac 上手流程，覆盖安装、Codex OAuth 登录、默认模型设置、配置文件结构、回调排错与 embeddings 注意事项。
+summary: 一篇给开发者看的完整实操指南，重点讲清楚如何在 macOS 上安装 OpenClaw，并用 ChatGPT OAuth 把 Codex 接入为默认模型。
 category: AI 工具教程
 pubDate: 2026-03-24
 updatedDate: 2026-03-24
@@ -18,236 +18,285 @@ tags:
 draft: false
 ---
 
-如果你想在 Mac 上快速部署 OpenClaw，并把 Codex 接入为默认的大模型能力，这篇文章可以帮你从安装、认证到基础配置一次走通。
+如果你想在 Mac 上搭一个能真正干活的 AI Agent 环境，OpenClaw 是一条很直接的路。它不是单纯的模型调用壳子，而是一套把模型、工具、工作区和执行流程接起来的运行框架。对开发者来说，真正有价值的地方在于：模型切换、Agent 默认配置、认证状态、服务状态和工作目录，都能收在一套相对统一的体系里。
 
-根据 OpenClaw 官方文档，macOS 上最省事的方式是直接运行官方安装脚本；安装器会自动检测系统环境、补齐 Node 依赖并启动初始化流程。
+而在模型接入这件事上，Codex 又是很多人最先会考虑的选项。原因也很现实：如果你本来就在用 ChatGPT / Codex 订阅，走 OAuth 通路通常比重新准备 API Key 更顺手，尤其适合个人开发者或小团队先把流程跑通。
 
-## OpenClaw 是什么
+这篇文章基于 2026 年 3 月 24 日可见的 OpenClaw 官方文档重写。重点不是把命令列满，而是把第一次配置时最容易混淆的几个点讲清楚：OpenClaw 到底负责什么，`openai-codex` 和 `openai` 有什么区别，第一次该用 onboarding 还是直接 auth login，以及装完之后该怎么验证自己不是“看起来配好了，其实还没通”。
 
-[OpenClaw](https://github.com/openclaw/openclaw) 是一个面向 AI Agent 场景的框架，支持模型提供方切换、任务执行、工作区管理以及多种自动化能力。
+## OpenClaw 是什么，为什么很多人会拿它接 Codex
 
-对开发者来说，它不只是一个“模型调用工具”，更像是一个可以把模型、工具和执行流程串起来的 Agent 运行框架。更多背景可以参考官方的 [模型提供方概念文档](https://docs.openclaw.ai/concepts/model-providers)。
+[OpenClaw](https://github.com/openclaw/openclaw) 可以理解成一个 Agent runtime。它上面有模型提供方、认证、Gateway、工作区、工具调用、记忆和自动化这些层。你不需要一开始把所有能力都用上，但只要你后面想把“聊天”升级成“可执行任务”，它的价值就会明显起来。
 
-## 为什么选择 Codex
+Codex 在 OpenClaw 里对应的 provider 是 `openai-codex`。这一点很关键，因为不少人会把它和 `openai` 混在一起。两者虽然都和 OpenAI 有关，但接入方式不一样：
 
-在 OpenClaw 的模型提供方体系里，Codex 对应的 provider 是 `openai-codex`，其认证方式使用 OAuth，而不是传统的 API Key。这个点在官方 FAQ 和 provider 文档里都说明得比较明确：
+- `openai-codex/*` 这条线，主要对应 ChatGPT / Codex 订阅 OAuth。
+- `openai/*` 这条线，主要对应 OpenAI Platform API Key。
 
-- [OpenClaw FAQ](https://docs.openclaw.ai/help/faq)
-- [OpenAI / Codex provider 文档](https://docs.openclaw.ai/providers/openai)
+换句话说，如果你准备走 ChatGPT 账号授权，应该盯着 `openai-codex`；如果你打算按 API 调用计费，用的是 `OPENAI_API_KEY`，那通常对应的是 `openai` provider，而不是 `openai-codex`。
 
-官方文档显示，在 Codex 路径下，常见可用模型包括 `openai-codex/gpt-5.4`；不过不同账号可见的具体模型列表可能略有差异，最终应以你账号内实际可用的模型为准。
+官方文档：
 
-## 环境准备
+- [OpenAI / Codex provider](https://docs.openclaw.ai/providers/openai)
+- [Model Providers](https://docs.openclaw.ai/concepts/model-providers)
 
-在开始之前，建议先确认你的 Mac 可以正常使用终端，并具备基础的网络访问能力，以便下载安装资源和完成 OAuth 授权。
+## 先给结论：最短可用路径
 
-OpenClaw 官方安装说明提到，推荐使用 Node 24，或至少使用 Node 22.16 及以上版本。你可以先执行：
+第一次在 Mac 上配置时，最稳妥的路径还是这组命令：
 
 ```bash
-node -v
+curl -fsSL https://openclaw.ai/install.sh | bash
+openclaw --version
+openclaw doctor
+openclaw onboard --auth-choice openai-codex
 ```
 
-如果你的机器还没有合适的 Node 环境，也不用太担心，因为官方安装脚本会尝试自动处理相关依赖。安装说明见官方文档：[OpenClaw Install](https://docs.openclaw.ai/install)。
+浏览器里完成授权之后，再补这几条检查：
+
+```bash
+openclaw gateway status
+openclaw status --deep
+openclaw models status
+```
+
+如果这里都正常，基本就说明安装、Gateway、OAuth 和默认模型这几层已经串起来了。
+
+## 安装前先确认的三件事
+
+第一，Node 版本别太旧。OpenClaw 当前推荐 Node 24，最低要求是 Node 22.16 以上。官方安装脚本会尽量帮你处理，但你至少要知道，环境太老时，问题不一定出在 OpenClaw 本身。
+
+第二，浏览器最好能正常打开。Codex 这条接入路径走的是标准 OAuth，不是手动贴 Key，所以浏览器授权基本是必经步骤。
+
+第三，如果你平时 shell 环境比较“干净”，要对 PATH 问题有点心理准备。很多安装失败其实不是装失败，而是装完之后 shell 找不到 `openclaw`。
+
+安装文档：
+
+- [OpenClaw Install](https://docs.openclaw.ai/install)
 
 ## 在 Mac 上安装 OpenClaw
 
-官方推荐的安装命令如下：
+OpenClaw 官方仍然优先推荐脚本安装：
 
 ```bash
 curl -fsSL https://openclaw.ai/install.sh | bash
 ```
 
-这条命令会自动识别当前系统环境，并完成 OpenClaw CLI 的安装与基础初始化。
+这条命令不只是下载 CLI。按官方说明，它会探测环境、在需要时准备 Node、安装 OpenClaw，并进入 onboarding。
 
-如果你只想先安装，不想立刻进入 onboarding，也可以这样执行：
+如果你想先只安装，不立刻做向导初始化，可以改用：
 
 ```bash
 curl -fsSL https://openclaw.ai/install.sh | bash -s -- --no-onboard
 ```
 
-如果你更习惯手动管理 Node 包，也可以通过 npm 直接安装 OpenClaw，然后再执行初始化命令：
+你也可以用 npm 手动装：
 
 ```bash
 npm install -g openclaw@latest
 openclaw onboard --install-daemon
 ```
 
-对应官方安装文档：<https://docs.openclaw.ai/install>
+但如果你只是想尽快跑通第一套环境，脚本安装通常省事得多。
 
-## 安装完成后的检查
+## 第一次接 Codex 时，该用 onboarding 还是直接 login
 
-安装完成后，建议先执行下面几条命令，确认 OpenClaw 是否已经正常工作：
+这是很多文章最容易写旧的地方。
+
+按照当前官方文档，下面两条命令都属于受支持的 Codex 登录方式：
+
+```bash
+openclaw onboard --auth-choice openai-codex
+```
+
+```bash
+openclaw models auth login --provider openai-codex
+```
+
+区别不在“哪条是对的”，而在“哪条更适合当前场景”：
+
+- `openclaw onboard --auth-choice openai-codex` 适合第一次安装。它会把安装后的初始化、授权和默认模型设置串在一起。
+- `openclaw models auth login --provider openai-codex` 适合 OpenClaw 已经装好，只需要单独补做登录、重新授权，或者检查某个 provider 的 auth 状态。
+
+如果你是第一次配，我还是建议优先走 onboarding。它的好处不是更高级，而是更不容易漏步骤。
+
+## OAuth 流程里，真正容易卡住的是哪一步
+
+Codex 在 OpenClaw 里走的是标准 PKCE OAuth。CLI 会给你一个授权链接，浏览器完成登录后，再尝试跳回本地回调地址，常见示例是：
+
+```text
+http://127.0.0.1:1455/auth/callback
+```
+
+这里有两个很常见的误判。
+
+第一个误判是：浏览器跳到本地回调页出错，就以为整个授权失败了。其实不一定。官方 OAuth 文档明确提到，如果 CLI 没有成功捕获回调，你可以把浏览器最后跳转到的完整 URL 粘贴回终端，继续完成登录。
+
+第二个误判是：登录成功后还去手动维护 token。正常情况下没这个必要。OAuth 状态会存进本地 auth profile，OpenClaw 会负责 refresh，你更应该关心的是 profile 是否真的写成功，而不是自己去改 token 文件。
+
+官方说明：
+
+- [OAuth](https://docs.openclaw.ai/concepts/oauth)
+
+## 装完之后，不要急着改配置文件
+
+很多人一上来就打开 `~/.openclaw/openclaw.json`，其实顺序反了。更好的做法是先用 CLI 把状态看清楚。
+
+我更推荐先跑这一组：
 
 ```bash
 openclaw --version
 openclaw doctor
 openclaw gateway status
+openclaw status --deep
+openclaw models status
 ```
 
-如果终端提示 `openclaw: command not found`，通常说明 PATH 中没有正确包含 npm 的全局可执行目录。官方文档建议检查 `npm prefix -g` 的输出，并把对应目录加入 shell 配置文件。
+它们各自解决的是不同问题：
 
-例如，你可以把下面这一行写入 `~/.zshrc` 或 `~/.bashrc`：
+- `openclaw --version`：确认命令已经进 PATH。
+- `openclaw doctor`：检查并修复常见配置或状态问题。
+- `openclaw gateway status`：确认 Gateway 服务是否已安装并运行。
+- `openclaw status --deep`：做更深入的运行态探测。
+- `openclaw models status`：检查默认模型解析结果、provider 认证状态，以及 OAuth 是否缺失、过期或即将过期。
+
+如果你希望看得更细一点，还可以补两条：
+
+```bash
+openclaw models list --provider openai-codex
+openclaw models status --check
+```
+
+第一条适合确认当前账号实际能看到哪些 Codex 模型；第二条适合放进脚本或自动化里，用退出码直接判断凭证有没有问题。
+
+相关文档：
+
+- [Models CLI](https://docs.openclaw.ai/models)
+- [Troubleshooting](https://docs.openclaw.ai/help/troubleshooting)
+- [Health Checks](https://docs.openclaw.ai/health)
+
+## 如果 `openclaw` 命令找不到
+
+最常见原因不是没装上，而是 PATH 没带上 npm 的全局 bin 目录。可以先看一下：
+
+```bash
+npm prefix -g
+```
+
+然后把下面这行放进 `~/.zshrc`：
 
 ```bash
 export PATH="$(npm prefix -g)/bin:$PATH"
 ```
 
-保存后重新打开终端，再次执行 `openclaw --version`，一般就可以确认是否已经修复成功。
+保存后重新开终端，再执行一次 `openclaw --version`。
 
-## 配置 Codex 认证
+## 默认模型通常在哪里看
 
-接下来是最关键的一步：把 Codex 接入 OpenClaw。
+当前官方文档给出的 Codex 默认示例是：
 
-按照 OpenClaw 官方文档，推荐使用 onboarding 流程直接选择 `openai-codex` 完成认证：
-
-```bash
-openclaw onboard --auth-choice openai-codex
+```text
+openai-codex/gpt-5.4
 ```
 
-需要特别注意的是，公开 issue 中提到，在部分版本里，`openclaw models auth login --provider openai-codex` 并不是正确入口，因为该子命令主要面向 provider 插件，而 `openai-codex` 的 OAuth 认证实际由 onboarding 流程处理。
+如果 onboarding 走得顺，这个值很多时候已经自动写进去了。你可以在 `~/.openclaw/openclaw.json` 里确认，常见位置是：
 
-参考：
-
-- [模型提供方概念文档](https://docs.openclaw.ai/concepts/model-providers)
-- [相关 issue 讨论](https://github.com/openclaw/openclaw/issues/32892)
-
-换句话说，如果你是要登录 Codex，优先使用下面这条命令会更稳妥：
-
-```bash
-openclaw onboard --auth-choice openai-codex
-```
-
-## OAuth 登录流程说明
-
-执行命令后，终端通常会生成一个 OAuth 授权链接，你需要在浏览器中打开它，并使用自己的 OpenAI/ChatGPT 账号完成授权。
-
-部分用户在浏览器跳转到本地 `localhost` 回调地址后，可能会看到空白页或异常提示，但这并不一定意味着失败。实际关键步骤通常是将浏览器地址栏中的完整回调 URL 复制回终端，以便 OpenClaw 完成后续认证。
-
-如果一切顺利，OpenClaw 会在本地保存认证状态，并把可用的 Codex 模型加入模型列表中。
-
-这部分流程可以结合第三方实操记录理解，但最终仍应以官方文档为准：
-
-- [OpenAI / Codex provider 文档](https://docs.openclaw.ai/providers/openai)
-- [Lumadock 教程](https://lumadock.com/tutorials/openclaw-openai-codex-chatgpt-subscription?language=turkish)
-
-## 将 Codex 设为默认模型
-
-OpenClaw 的配置示例显示，模型默认项通常位于主配置文件中，而主配置文件一般位于 `~/.openclaw/openclaw.json`。
-
-如果 onboarding 已经自动完成默认模型设置，那么你可能不需要再手动修改配置；但如果你希望显式指定主模型，可以参考类似下面的写法：
-
-```json
+```json5
 {
-  "agents": {
-    "defaults": {
-      "workspace": "~/.openclaw/workspace",
-      "model": {
-        "primary": "openai-codex/gpt-5.4"
+  agents: {
+    defaults: {
+      model: {
+        primary: "openai-codex/gpt-5.4"
       }
     }
   }
 }
 ```
 
-这里的 `primary` 表示默认主模型，而 `workspace` 则对应 Agent 的工作目录。
+如果你想把配置结构顺手看明白，通常会涉及这几个区域：
 
-需要注意的是，具体模型名称应以你当前账号在 OpenClaw 中实际可见的 Codex 模型列表为准，因为不同账户可能看到不同的型号。参考：
+- `agents.defaults`：默认 Agent 行为，比如主模型、fallback、workspace。
+- `models.providers`：provider 的显式配置。
+- `auth` 或 auth profiles：OAuth / API Key 的认证状态。
 
-- [配置示例文档](https://docs.openclaw.ai/gateway/configuration-examples)
-- [OpenAI / Codex provider 文档](https://docs.openclaw.ai/providers/openai)
-- [Lumadock 配置参考](https://lumadock.com/tutorials/openclaw-cli-config-reference)
+也就是说，后面你无论是加 OpenAI API Key、补 OpenRouter，还是改 fallback，基本都还是围绕这套配置体系展开。
 
-## 配置文件位置与结构
+配置文档：
 
-公开的配置参考资料显示，OpenClaw 通常使用单一配置文件管理模型、认证、工具和 Agent 默认项，主配置文件路径一般为 `~/.openclaw/openclaw.json`。
+- [Configuration](https://docs.openclaw.ai/gateway/configuration)
 
-在这个配置体系里，常见会涉及几个重点区域：
+## 模型能登录，不代表 embeddings 也配好了
 
-- `agents.defaults`：设置默认 Agent 行为
-- `models.providers`：定义模型提供方
-- `auth.profiles`：保存认证资料
+这件事在实际使用里特别容易被忽略。
 
-这意味着，如果你后续要扩展到 OpenAI API Key、OpenRouter、本地模型或其他 provider，也大概率会继续围绕这一个配置文件展开。
+Codex OAuth 解决的是推理模型的认证和调用，不会自动替你把 embeddings 问题一起解决。OpenClaw 官方 FAQ 也明确提到：如果你要用 semantic memory search，OpenAI embeddings 仍然需要真实 API Key；单靠 Codex OAuth 不够。
 
-可参考：
+所以如果你的目标只是让 Agent 能调用 Codex，大多数情况下这一步已经够了。但如果你还打算启用记忆、检索、知识库或者语义搜索，就要再单独确认 embeddings provider。
 
-- [Gist 配置参考](https://gist.github.com/digitalknk/4169b59d01658e20002a093d544eb391)
-- [Lumadock 配置说明](https://lumadock.com/tutorials/openclaw-cli-config-reference)
-- [官方配置示例](https://docs.openclaw.ai/gateway/configuration-examples)
+官方 FAQ：
 
-## 一个容易忽略的问题：Embeddings
+- [FAQ](https://docs.openclaw.ai/faq)
 
-如果你准备用 Codex 作为主模型，还需要额外注意 embeddings。公开讨论中有人提到，Codex 方案本身不一定自带 embeddings，因此当你启用记忆、检索或知识库相关功能时，可能还需要额外配置 embeddings 提供方。
+## 一个更完整的排错梯子
 
-这也意味着，实际生产使用中很可能会出现“Codex 负责推理与生成，另一个 provider 负责 embeddings”的组合，这一点在搭建完整 Agent 工作流时尤其需要提前确认。
+如果安装或登录有问题，与其来回猜，不如按官方 troubleshooting 的顺序往下走。一个比较实用的本地排错梯子是：
 
-参考：
+```bash
+openclaw status
+openclaw status --all
+openclaw gateway probe
+openclaw gateway status
+openclaw doctor
+openclaw models status
+openclaw health --verbose
+openclaw logs --follow
+```
 
-- [Wes Bos 相关讨论](https://x.com/wesbos/status/2024610896811524535)
-- [官方配置示例](https://docs.openclaw.ai/gateway/configuration-examples)
+这组命令的好处是，它把“本地配置问题”“Gateway 服务没起来”“模型 auth 有问题”“运行时健康状态异常”拆开看，不容易把几类错误搅在一起。
 
-## 推荐的安装与配置顺序
+## 还有一个进阶细节：transport 一般不用动
 
-如果你希望尽量少踩坑，建议按下面的顺序来操作：
+官方 provider 文档提到，`openai/*` 和 `openai-codex/*` 默认 transport 是 `auto`，会优先尝试 WebSocket，再在需要时回退到 SSE。
 
-1. 运行官方安装脚本安装 OpenClaw。
-2. 使用 `openclaw --version`、`openclaw doctor` 和 `openclaw gateway status` 检查环境。
-3. 执行 `openclaw onboard --auth-choice openai-codex`。
-4. 在浏览器中完成 OpenAI/ChatGPT 账号授权。
-5. 按提示把回调 URL 粘贴回终端。
-6. 检查默认模型是否已经设置为可用的 Codex 模型。
-7. 如果需要记忆或检索功能，再单独补 embeddings 配置。
+这意味着，大多数情况下你根本不需要手动改 transport。只有在你明确遇到某类网络兼容问题，或者要做更细的链路控制时，才值得去碰相关参数。第一次安装时，不建议把这类高级选项提前复杂化。
 
-参考来源：
+## 我更推荐的安装顺序
 
-- [OpenClaw 安装文档](https://docs.openclaw.ai/install)
-- [Issue 32892](https://github.com/openclaw/openclaw/issues/32892)
-- [Wes Bos 讨论](https://x.com/wesbos/status/2024610896811524535)
+如果你想把这套流程写进自己的常用 SOP，我建议这样排：
 
-## 常见问题
+1. 用官方脚本安装 OpenClaw。
+2. 跑 `openclaw --version` 和 `openclaw doctor`，先确认命令和本地状态没问题。
+3. 用 `openclaw onboard --auth-choice openai-codex` 完成第一次 Codex 登录。
+4. 用 `openclaw models status` 看默认模型和 OAuth 状态。
+5. 用 `openclaw gateway status` 和 `openclaw status --deep` 检查服务与运行态。
+6. 只有在工作流真的需要时，再补 embeddings provider、fallback 或更细的 provider 配置。
 
-### 1. 安装成功，但命令无法执行
-
-这类问题大多与 PATH 配置有关。只要把 npm 的全局 bin 目录正确加入 shell 环境变量，通常就能解决。
-
-### 2. 为什么不用 `models auth login`
-
-因为在部分版本中，`models auth login --provider openai-codex` 并不是 Codex OAuth 的正确入口。根据公开 issue 的说明，Codex 认证更适合通过 onboarding 流程完成。
-
-### 3. 登录成功后仍然看不到目标模型
-
-这种情况通常需要优先检查当前 OpenClaw 版本、账号权限以及 onboarding 是否真正完成了认证持久化。
-
-### 4. Codex 能否直接覆盖所有模型能力
-
-不一定。尤其是在 embeddings 相关场景下，你可能还需要额外补充其他模型或 API 配置。
+这样做的好处很简单：哪里出问题，定位起来会快很多。
 
 ## 可直接复制的命令清单
 
-下面这组命令适合直接放在文章末尾，读者可以按顺序执行：
-
 ```bash
-# 1) 安装 OpenClaw
+# 安装
 curl -fsSL https://openclaw.ai/install.sh | bash
 
-# 2) 检查安装状态
+# 基础检查
 openclaw --version
 openclaw doctor
 openclaw gateway status
+openclaw status --deep
+openclaw models status
 
-# 3) 通过 onboarding 接入 Codex
+# 第一次接 Codex
 openclaw onboard --auth-choice openai-codex
-```
 
-如果你需要手动调整默认模型，再打开配置文件检查 `~/.openclaw/openclaw.json` 中的 `agents.defaults.model.primary` 是否已经指向可用的 Codex 模型即可。
+# 已安装环境里补做或重做登录
+openclaw models auth login --provider openai-codex
+
+# 确认模型可见性
+openclaw models list --provider openai-codex
+```
 
 ## 结语
 
-如果你的目标是在 Mac 上快速搭建一个可执行任务的 AI Agent 环境，那么 OpenClaw 是一个值得尝试的方案，而通过 `openai-codex` 接入 Codex 则能让整体配置流程更加顺畅。
+现在在 Mac 上把 OpenClaw 接到 Codex，流程已经比早期清楚很多。真正要记住的不是某一条命令，而是几层关系：OpenClaw 负责 runtime 和配置体系，`openai-codex` 负责 ChatGPT / Codex OAuth，`openai` 负责 API Key，而 embeddings 往往是另一件事。
 
-对大多数开发者来说，最推荐的路径是：先完成 OpenClaw 安装，再通过 onboarding 完成 Codex OAuth 认证，最后检查默认模型和 embeddings 配置是否完整，这样通常就可以比较稳定地把 Codex 作为 OpenClaw 的大模型 API 使用起来。
-
-官方文档入口：
-
-- [安装文档](https://docs.openclaw.ai/install)
-- [OpenAI / Codex provider 文档](https://docs.openclaw.ai/providers/openai)
+如果你是第一次配置，优先走 onboarding；如果你只是补授权或重新登录，直接用 `openclaw models auth login --provider openai-codex` 也完全没问题。两条路径现在都是官方支持的，只是面对的使用场景不同。
