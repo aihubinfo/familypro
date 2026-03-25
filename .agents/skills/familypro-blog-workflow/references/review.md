@@ -22,10 +22,12 @@ Use this reference when the user asks to review, audit, inspect, or sanity-check
    - Are any sections thin, duplicated, or mechanically split?
 4. Frontmatter and multilingual integrity
    - `locale`, `translationKey`, `title`, `headline`, `description`, `summary`, dates
+   - locale-specific `title` / `description` length limits, including hard caps
    - Cross-language consistency without literal translation artifacts
 5. SEO basics
    - `title` / `headline` relation
    - clarity and uniqueness of `description`
+   - hard-cap violations on `title` or `description` are findings, not style nits
    - external links defaulting to `rel="nofollow"`
    - likely canonical/hreflang/structured-data implications if relevant to the change
 
@@ -43,3 +45,4 @@ Use this reference when the user asks to review, audit, inspect, or sanity-check
 - The article treats a conditional fact as universal
 - Multilingual variants drift in meaning or over-translate
 - `title` and `h1` no longer describe the same page
+- English or Japanese `title` / `description` exceeds the documented hard cap

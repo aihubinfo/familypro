@@ -1,9 +1,9 @@
 ---
 locale: en
 translationKey: google-ai-plan-guide
-title: "Google AI Plans Explained: What Plus, Pro, and Ultra Include and How Much You Get"
+title: "Google AI Plus vs Pro vs Ultra: Plans, Limits, and Pricing"
 headline: How to choose between Google AI Plus, Pro, and Ultra
-description: A practical guide to Google AI Plus, Pro, and Ultra, based on official Google pages as of March 25, 2026. Covers included AI products, publicly confirmed limits, storage, AI credits, and who each plan is for.
+description: Google AI Plus, Pro, and Ultra compared using Google pages checked March 25, 2026. See public limits, AI credits, storage, and which plan fits your needs.
 summary: If you are trying to decide between Google AI Plus, Pro, and Ultra, this guide explains pricing, storage, AI credits, NotebookLM, Gemini, Flow, Whisk, Jules, Gemini CLI, and the main reasons to choose each plan.
 category: AI Subscription Comparisons
 pubDate: 2026-03-25
@@ -83,7 +83,7 @@ If you only want a one-line recommendation:
 | Whisk | Yes | Yes, with higher access | Yes, with highest access |
 | Gemini in Gmail / Workspace | Yes, narrower scope | Yes, broader scope | Yes |
 | Search AI Mode | Yes, with more access | Yes, with higher access | Yes, with highest access |
-| Deep Search in Search | Not clearly published as a separate Plus entitlement | Yes | Yes |
+| Deep Search in Search | Yes | Yes | Yes |
 | Jules | No | Yes | Yes, with the highest access |
 | Gemini CLI / Gemini Code Assist | No | Yes | Yes |
 | Google Antigravity | No | Yes | Yes, with the highest access |
@@ -105,7 +105,7 @@ One important warning before we go any further:
 
 ### 3.1 If You Plan To Make Videos, Look At AI Credits First
 
-Google now uses `AI credits` for some of its higher-cost generative features. In practice, this matters most for `Flow` and `Whisk`.
+Google now uses `AI credits` for some of its higher-cost generative features. The current official help page explicitly says AI credits can be used across `Flow`, `Whisk`, and `Google Antigravity`; for most individual buyers, though, video generation is still the clearest place where those credits matter.
 
 The monthly AI credit allocation is:
 
@@ -158,27 +158,25 @@ This table matters because it tells you something very practical:
 - `Pro` is where NotebookLM starts feeling like a serious project and knowledge-work tool.
 - `Ultra` pushes NotebookLM into workstation territory rather than "nice subscription extra."
 
-### 3.3 Gemini App Limits: Google Publishes Some Hard Numbers, But Not Equally Across All Three Plans
+### 3.3 Gemini App Limits: Google Now Publishes The Main Hard Caps For Plus, Pro, And Ultra
 
-This is the part people most often overstate.
+This is the section that most often gets outdated.
 
-- Google does publish a `Gemini Apps limits & upgrades` help page.
-- But the most complete public hard-limit data there is for **non-subscribers / Pro / Ultra**.
-- For `Google AI Plus`, Google still leans heavily on language like `more access` rather than giving a full fixed-number grid for every feature.
-
-So if you see very detailed "Plus gets X, Y, and Z per day" claims around the web, it is worth checking whether Google still publishes those numbers clearly and consistently in its current docs.
+- Google’s current `Gemini Apps limits & upgrades` help page now publishes the main limits for **no plan / Plus / Pro / Ultra**.
+- Google also says these limits can change with capacity, experimentation, and product updates, and that usage is distributed throughout the day rather than guaranteed as one fixed uninterrupted block.
 
 As of March 25, 2026, the core public Gemini hard limits include:
 
-| Gemini App Item | Pro | Ultra |
-| --- | --- | --- |
-| Gemini 3 Pro prompts | 100/day | 500/day |
-| Deep Research reports | 20/day | 200/day |
-| Nano Banana Pro image generation / editing | 100 images/day | 1,000 images/day |
-| In-app video generation | 3/day | 5/day |
-| Gemini Agent | No | 200 agent requests/day, up to 3 concurrent tasks |
-| Deep Think 3.1 | No | 10/day |
-| Context window | 1M tokens | 1M tokens |
+| Gemini App Item | Plus | Pro | Ultra |
+| --- | --- | --- | --- |
+| Gemini 3.1 Pro prompts | 30/day | 100/day | 500/day |
+| Deep Research reports | 12/day | 20/day | 120/day |
+| Nano Banana 2 image generation / editing | 50 images/day | 100 images/day | 1,000 images/day |
+| Nano Banana Pro redo | 50 images/day | 100 images/day | 1,000 images/day |
+| In-app video generation | 2/day | 3/day | 5/day |
+| Gemini Agent | No | No | 200 agent requests/day, up to 3 concurrent tasks |
+| Deep Think 3.1 | No | No | 10/day |
+| Context window | 128k tokens | 1M tokens | 1M tokens |
 
 Google also explicitly notes on that page that:
 
@@ -188,9 +186,9 @@ Google also explicitly notes on that page that:
 
 So if you are buying mainly for Gemini itself, the most practical interpretation is:
 
-- `Plus` is for people who want a clearly better experience without needing a published hard quota grid
-- `Pro` is where publicly clearer higher caps start to matter
-- `Ultra` is where you get `Gemini Agent` and `Deep Think`
+- `Plus` is no longer just a vague "more access" tier. It now has published daily limits for the main Gemini features.
+- `Pro` is where the jump to a **1M context window** and much roomier daily headroom starts to matter.
+- `Ultra` is where you get `Gemini Agent`, `Deep Think`, and the highest caps together.
 
 ## 4. What Are These AI Products Actually For?
 
@@ -274,16 +272,18 @@ The main thing to avoid overstating here is treating `AI Mode` and `Deep Search`
 
 The safer interpretation is:
 
+- `Plus / Pro / Ultra`: all explicitly include `Deep Search`
 - `Plus`: more AI Mode access
-- `Pro / Ultra`: explicitly include `Deep Search`
+- `Pro / Ultra`: Google also separately lists the `Gemini 3 Pro model in AI Mode`
 - `Pro / Ultra`: more clearly include some `agentic capabilities`
 - US-only `Pro / Ultra`: `AI-powered calling for local businesses`
 
 One of the clearest public hard limits Google publishes here is for image generation in AI Mode:
 
-- Non-subscribers: **100 images / 24 hours**
-- `Google AI Pro / Ultra`: **1,000 images / 24 hours**
-- `Plus`: the plan page says "more access", but the current help page does not publish a separate fixed number the way it does for `Pro / Ultra`
+- No Google AI plan: **20 images / 24 hours**
+- `Google AI Plus`: **50 images / 24 hours**
+- `Google AI Pro`: **100 images / 24 hours**
+- `Google AI Ultra`: **1,000 images / 24 hours**
 
 ### 4.7 Jules: A Coding Agent, Not Just A Completion Tool
 
@@ -477,6 +477,7 @@ This article is based primarily on the following official Google pages, last che
 - [Google AI Plus availability announcement](https://blog.google/products-and-platforms/products/google-one/google-ai-plus-availability/)
 - [Google AI Ultra announcement](https://blog.google/products-and-platforms/products/google-one/google-ai-ultra/)
 - [Get a Google AI Plus membership](https://support.google.com/googleone/answer/16548195)
+- [Use Google AI Plus benefits](https://support.google.com/googleone/answer/16882689)
 - [Use Google AI Pro benefits](https://support.google.com/googleone/answer/14534406)
 - [Get Google AI Ultra benefits](https://support.google.com/googleone/answer/16286513)
 - [Manage your AI credits with Google One](https://support.google.com/googleone/answer/16287445)

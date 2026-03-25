@@ -22,6 +22,8 @@ Use this reference when adjusting `title`, `headline`, `description`, `summary`,
 - Chinese `description`: 60-90 Han characters, hard cap 110
 - English/Japanese `description`: 120-160 characters, hard cap 180
 
+Hard caps are mandatory. Treat anything over the cap as a bug that must be rewritten, not as an acceptable tradeoff.
+
 ## Structure guidance
 
 - The page has one template-level `h1`.
@@ -32,6 +34,8 @@ Use this reference when adjusting `title`, `headline`, `description`, `summary`,
 - If the article uses raw HTML `<a>` tags, keep `rel="nofollow"` explicit instead of assuming the renderer will add it later.
 
 ## Validation triggers
+
+Always measure final string length when you touch `title` or `description`.
 
 Inspect built output when changing any of the following:
 
