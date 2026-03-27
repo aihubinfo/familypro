@@ -51,7 +51,11 @@ const siteName = getSiteName(currentLang);
 const visibleHeadline = post.data.headline ?? post.data.title;
 const activeLangs = collectSiteLangs(siteLangs);
 const { Content, headings } = await render(post);
-const tocHeadings = headings.filter((heading) => heading.depth === 2);
+const tocH2Headings = headings.filter(
+  (heading) => heading.depth === 2 && heading.text.trim().length > 0 && heading.slug.trim().length > 0,
+);
+const MIN_TOC_H2_COUNT = 3;
+const shouldShowToc = tocH2Headings.length >= MIN_TOC_H2_COUNT;
 const getPostSlug = (id: string) => id.split('/').pop() ?? id;
 const publishedAt = post.data.pubDate;
 const modifiedAt = post.data.updatedDate ?? publishedAt;
@@ -137,24 +141,29 @@ const jsonLd = {
   jsonLd={jsonLd}
 >
   <article>
-    <header class="article-header">
-      <p class="category">{post.data.category}</p>
-      <p class="meta">{metaParts.join(' · ')}</p>
-      <h1>{visibleHeadline}</h1>
-      <p class="desc">{post.data.summary}</p>
-    </header>
+    <div class={`article-layout${shouldShowToc ? ' article-layout-with-toc' : ''}`}>
+      <header class="article-header">
+        <p class="category">{post.data.category}</p>
+        <p class="meta">{metaParts.join(' · ')}</p>
+        <h1>{visibleHeadline}</h1>
+        <p class="desc">{post.data.summary}</p>
+      </header>
 
-    {coverImageSrc && <img class="cover-image" src={coverImageSrc} alt={post.data.title} />}
+      {coverImageSrc && <img class="cover-image" src={coverImageSrc} alt={post.data.title} />}
 
-    <div class="article-shell">
-      {tocHeadings.length > 0 && (
-        <aside class="toc-card" aria-labelledby="toc-title">
-          <p id="toc-title" class="toc-title">{ui.tableOfContents}</p>
-          <nav aria-label={ui.tableOfContents}>
+      {shouldShowToc && (
+        <aside class="toc-card toc-rail" aria-labelledby="toc-title">
+          <button class="toc-toggle" type="button" aria-controls="toc-nav" aria-expanded="false">
+            <span id="toc-title" class="toc-title">{ui.tableOfContents}</span>
+            <span class="toc-toggle-icon" aria-hidden="true">+</span>
+          </button>
+          <nav id="toc-nav" class="toc-panel" aria-label={ui.tableOfContents}>
             <ul class="toc-list">
-              {tocHeadings.map((heading) => (
+              {tocH2Headings.map((heading) => (
                 <li class="toc-section">
-                  <a class="toc-link toc-link-h2" href={`#${heading.slug}`}>{heading.text}</a>
+                  <a class="toc-link toc-link-h2" data-toc-link data-target={heading.slug} href={`#${heading.slug}`}>
+                    {heading.text}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -168,6 +177,103 @@ const jsonLd = {
     </div>
   </article>
 </BaseLayout>
+
+{shouldShowToc && (
+  <script is:inline>
+    (() => {
+      const tocRail = document.querySelector('.toc-rail');
+      const tocToggle = tocRail?.querySelector('.toc-toggle');
+      const tocToggleIcon = tocRail?.querySelector('.toc-toggle-icon');
+      const tocLinks = Array.from(document.querySelectorAll('.toc-rail [data-toc-link]'));
+      const headingNodes = Array.from(document.querySelectorAll('.article-main h2[id]'));
+      if (!tocRail || !tocToggle || !tocLinks.length || !headingNodes.length) return;
+
+      document.documentElement.classList.add('has-toc-js');
+
+      const setExpanded = (expanded) => {
+        tocRail.classList.toggle('is-open', expanded);
+        tocToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        if (tocToggleIcon) {
+          tocToggleIcon.textContent = expanded ? '-' : '+';
+        }
+      };
+
+      const setActive = (activeId) => {
+        for (const link of tocLinks) {
+          const target = link.getAttribute('data-target');
+          const isActive = Boolean(activeId && target === activeId);
+          link.classList.toggle('is-active', isActive);
+          if (isActive) {
+            link.setAttribute('aria-current', 'true');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        }
+      };
+
+      const updateActiveHeading = () => {
+        let activeId = headingNodes[0]?.id;
+        for (const heading of headingNodes) {
+          if (heading.getBoundingClientRect().top <= 140) {
+            activeId = heading.id;
+          } else {
+            break;
+          }
+        }
+        if (activeId) {
+          setActive(activeId);
+        }
+      };
+
+      setExpanded(false);
+      tocToggle.addEventListener('click', () => {
+        setExpanded(!tocRail.classList.contains('is-open'));
+      });
+
+      for (const link of tocLinks) {
+        link.addEventListener('click', () => {
+          if (window.matchMedia('(max-width: 979px)').matches) {
+            setExpanded(false);
+          }
+        });
+      }
+
+      const hashId = decodeURIComponent(window.location.hash.replace('#', ''));
+      if (hashId && headingNodes.some((heading) => heading.id === hashId)) {
+        setActive(hashId);
+      } else {
+        updateActiveHeading();
+      }
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          () => {
+            updateActiveHeading();
+          },
+          {
+            rootMargin: '-24% 0px -62% 0px',
+            threshold: [0, 1],
+          },
+        );
+
+        for (const heading of headingNodes) {
+          observer.observe(heading);
+        }
+      } else {
+        window.addEventListener('scroll', updateActiveHeading, { passive: true });
+      }
+
+      window.addEventListener('hashchange', () => {
+        const nextId = decodeURIComponent(window.location.hash.replace('#', ''));
+        if (nextId && headingNodes.some((heading) => heading.id === nextId)) {
+          setActive(nextId);
+        } else {
+          updateActiveHeading();
+        }
+      });
+    })();
+  </script>
+)}
 
 <style>
   .article-header {
@@ -209,9 +315,14 @@ const jsonLd = {
     object-fit: cover;
   }
 
-  .article-shell {
+  article {
+    max-width: 100%;
+  }
+
+  .article-layout {
     display: grid;
-    gap: 1.2rem;
+    gap: 1rem;
+    align-items: start;
   }
 
   .article-main {
@@ -225,7 +336,20 @@ const jsonLd = {
     padding: 1rem;
   }
 
-  .toc-card {
+  :global(.markdown-body table) {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  :global(.markdown-body th),
+  :global(.markdown-body td) {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .toc-rail {
     background: #f8fafc;
     border: 1px solid #dbe5ef;
     border-radius: 1rem;
@@ -233,12 +357,42 @@ const jsonLd = {
     box-shadow: 0 6px 18px -20px rgba(15, 23, 42, 0.8);
   }
 
+  .toc-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    font: inherit;
+  }
+
   .toc-title {
-    margin: 0 0 0.72rem;
+    margin: 0;
+    display: block;
     color: #334155;
     font-size: 0.95rem;
     font-weight: 700;
     letter-spacing: 0.01em;
+  }
+
+  .toc-toggle-icon {
+    flex: none;
+    color: #0f766e;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .toc-panel {
+    padding-top: 0.72rem;
+  }
+
+  :global(.has-toc-js .toc-rail:not(.is-open) .toc-panel) {
+    display: none;
   }
 
   .toc-list {
@@ -272,30 +426,60 @@ const jsonLd = {
     line-height: 1.45;
   }
 
-  .toc-link:hover {
+  .toc-link:hover,
+  .toc-link:focus-visible {
     color: #0f766e;
+  }
+
+  .toc-link.is-active,
+  .toc-link[aria-current='true'] {
+    color: #0f766e;
+    font-weight: 700;
   }
 
   :global(.markdown-body h2) {
     scroll-margin-top: 6.5rem;
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    :global(html) {
+      scroll-behavior: smooth;
+    }
+  }
+
   @media (min-width: 980px) {
-    .article-shell {
-      grid-template-columns: minmax(0, 1fr) 250px;
-      align-items: start;
+    :global(main.container.content) {
+      width: min(1240px, 94vw);
     }
 
-    .article-main {
+    .article-layout-with-toc {
+      grid-template-columns: minmax(0, 1fr) 290px;
+      column-gap: 1.5rem;
+    }
+
+    .article-layout-with-toc > .article-header,
+    .article-layout-with-toc > .cover-image,
+    .article-layout-with-toc > .article-main {
       grid-column: 1;
-      grid-row: 1;
     }
 
-    .toc-card {
+    .toc-rail {
       grid-column: 2;
-      grid-row: 1;
+      grid-row: 1 / span 3;
       position: sticky;
       top: 6.4rem;
+      max-height: calc(100vh - 7.2rem);
+      overflow: auto;
+      overscroll-behavior: contain;
+    }
+
+    .toc-toggle {
+      display: none;
+    }
+
+    .toc-panel {
+      display: block;
+      padding-top: 0;
     }
   }
 </style>
