@@ -7,7 +7,7 @@ description: Google AI Plus, Pro, and Ultra compared using Google pages checked 
 summary: If you are trying to decide between Google AI Plus, Pro, and Ultra, this guide explains pricing, storage, AI credits, NotebookLM, Gemini, Flow, Whisk, Jules, Gemini CLI, and the main reasons to choose each plan.
 category: AI Subscription Comparisons
 pubDate: 2026-03-25
-updatedDate: 2026-03-25
+updatedDate: 2026-03-27
 author: Mark
 service: Google AI
 tags:
@@ -469,7 +469,7 @@ If you only want the easiest recommendation possible:
 
 And one final reminder: Google explicitly says many limits can change based on capacity, region, and experimental rollout. Before buying, it is worth checking your own live Google One plan page one more time.
 
-## Sources
+## References
 
 This article is based primarily on the following official Google pages, last checked on **March 25, 2026**:
 

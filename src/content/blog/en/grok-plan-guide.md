@@ -276,7 +276,7 @@ For most buyers, this is not about counting plan names. It is a two-step decisio
 
 Once you answer those two questions, Grok’s plan structure becomes much easier to navigate than it looks at first glance.
 
-## Related Links
+## References
 
 - [xAI Consumer FAQs](https://x.ai/legal/faq)
 - [xAI News (includes the Grok 4 / SuperGrok Heavy announcement)](https://x.ai/news)

@@ -53,6 +53,17 @@ const activeLangs = collectSiteLangs(siteLangs);
 const { Content, headings } = await render(post);
 const tocHeadings = headings.filter((heading) => heading.depth === 2);
 const getPostSlug = (id: string) => id.split('/').pop() ?? id;
+const publishedAt = post.data.pubDate;
+const modifiedAt = post.data.updatedDate ?? publishedAt;
+const publishedDateText = publishedAt.toISOString().slice(0, 10);
+const modifiedDateText = modifiedAt.toISOString().slice(0, 10);
+const showUpdatedDate = modifiedAt.getTime() > publishedAt.getTime();
+const metaParts = [`${ui.publishedLabel} ${publishedDateText}`];
+if (showUpdatedDate) {
+  metaParts.push(`${ui.updatedLabel} ${modifiedDateText}`);
+}
+metaParts.push(post.data.service);
+metaParts.push(`${ui.articleBy} ${post.data.author}`);
 
 const rawBaseUrl = import.meta.env.BASE_URL;
 const baseUrl = rawBaseUrl.endsWith('/') ? rawBaseUrl : `${rawBaseUrl}/`;
@@ -92,8 +103,8 @@ const jsonLd = {
   '@type': 'Article',
   headline: visibleHeadline,
   description: post.data.description,
-  datePublished: post.data.pubDate.toISOString(),
-  dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
+  datePublished: publishedAt.toISOString(),
+  dateModified: modifiedAt.toISOString(),
   inLanguage: localeCode,
   author: {
     '@type': 'Person',
@@ -120,17 +131,15 @@ const jsonLd = {
   alternates={alternates}
   image={coverImageSrc}
   type="article"
-  publishedTime={post.data.pubDate.toISOString()}
-  modifiedTime={(post.data.updatedDate ?? post.data.pubDate).toISOString()}
+  publishedTime={publishedAt.toISOString()}
+  modifiedTime={modifiedAt.toISOString()}
   tags={post.data.tags}
   jsonLd={jsonLd}
 >
   <article>
     <header class="article-header">
       <p class="category">{post.data.category}</p>
-      <p class="meta">
-        {post.data.pubDate.toISOString().slice(0, 10)} · {post.data.service} · {ui.articleBy} {post.data.author}
-      </p>
+      <p class="meta">{metaParts.join(' · ')}</p>
       <h1>{visibleHeadline}</h1>
       <p class="desc">{post.data.summary}</p>
     </header>

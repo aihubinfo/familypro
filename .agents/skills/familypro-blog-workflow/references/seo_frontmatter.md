@@ -8,6 +8,7 @@ Use this reference when adjusting `title`, `headline`, `description`, `summary`,
 - `headline`: optional visible page `h1`
 - `description`: search/social summary
 - `summary`: on-page short intro block under the article header
+- Any edit to `title` / `headline` / `description` / `summary` must sync `updatedDate` to today (`YYYY-MM-DD`)
 
 ## Title and headline rules
 

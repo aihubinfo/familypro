@@ -7,7 +7,7 @@ description: A practical Mac setup guide for OpenClaw with Codex OAuth, covering
 summary: A developer-focused walkthrough for installing OpenClaw on macOS and wiring Codex in as the default model with the supported OAuth flow.
 category: AI Tooling
 pubDate: 2026-03-24
-updatedDate: 2026-03-24
+updatedDate: 2026-03-27
 author: Mark
 service: OpenClaw
 tags:
@@ -68,7 +68,7 @@ If those commands look healthy, install, gateway, auth, and default model resolu
 
 ### 3.1 Your Node version
 
-OpenClaw currently recommends Node 24 and supports Node 22.16 or newer. The installer can help you, but it still helps to know the floor before you begin.
+OpenClaw currently recommends Node 24 and supports Node 22.14 or newer. The installer can help you, but it still helps to know the floor before you begin.
 
 ### 3.2 Browser-based auth is part of the normal flow
 
@@ -310,3 +310,16 @@ openclaw models list --provider openai-codex
 The Mac setup is much clearer now than it was in earlier OpenClaw releases, but the key idea is still the same: do not treat install, gateway health, auth, and embeddings as one problem. They are related, but they fail differently.
 
 If this is your first pass, use onboarding. If you are repairing an existing install, direct provider login is a perfectly valid path now. Both are supported in the current docs. The difference is simply when to use them.
+
+## References
+
+- [OpenClaw GitHub repository](https://github.com/openclaw/openclaw)
+- [OpenAI / Codex provider](https://docs.openclaw.ai/providers/openai)
+- [Model Providers](https://docs.openclaw.ai/concepts/model-providers)
+- [OpenClaw Install](https://docs.openclaw.ai/install)
+- [OAuth](https://docs.openclaw.ai/concepts/oauth)
+- [Models CLI](https://docs.openclaw.ai/models)
+- [Troubleshooting](https://docs.openclaw.ai/help/troubleshooting)
+- [Health Checks](https://docs.openclaw.ai/health)
+- [Configuration](https://docs.openclaw.ai/gateway/configuration)
+- [FAQ](https://docs.openclaw.ai/faq)

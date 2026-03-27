@@ -281,7 +281,7 @@ xAI 当前在官网和 App Store 页面都在强调 `Voice Mode`、`Live Camera`
 
 把这两个问题想明白以后，Grok 的套餐其实没有表面上那么乱。
 
-## Related Links
+## 官方参考
 
 - [xAI Consumer FAQs](https://x.ai/legal/faq)
 - [xAI News（含 Grok 4 / SuperGrok Heavy 公告）](https://x.ai/news)

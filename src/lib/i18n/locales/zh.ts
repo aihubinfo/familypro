@@ -12,5 +12,7 @@ export const zh: UiDictionary = {
   allPosts: '博客文章',
   footer: '© 2026 订阅省钱研究所 · 数据仅供参考，请以官方结账页为准。',
   articleBy: '作者',
+  publishedLabel: '发布',
+  updatedLabel: '更新',
   languageSwitch: '语言',
 };

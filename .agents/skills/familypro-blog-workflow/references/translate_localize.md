@@ -15,7 +15,11 @@ Use this reference when producing another language version of an article or loca
 - Main SEO keyword family
 - CTA and article intent
 - `translationKey`
-- If the post includes reference links, each language version should end with a `Related Links` section listing those references.
+- Any translated/localized file you edit should sync `updatedDate` to today's date (`YYYY-MM-DD`).
+- If the post includes reference links, each language version should end with a localized final reference section:
+  - non-Chinese: `## References`
+  - Chinese: `## 官方参考`
+- Run `npm run check:references` after translation/localization changes when references are present.
 
 ## What may change across languages
 

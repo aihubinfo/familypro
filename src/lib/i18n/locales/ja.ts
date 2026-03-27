@@ -13,5 +13,7 @@ export const ja: UiDictionary = {
   allPosts: 'ブログ記事',
   footer: '© 2026 サブスク節約ラボ · 価格は参考情報です。最終決済金額をご確認ください。',
   articleBy: '著者',
+  publishedLabel: '公開',
+  updatedLabel: '更新',
   languageSwitch: '言語',
 };

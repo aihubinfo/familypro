@@ -33,7 +33,7 @@
 - 同一篇跨语言内容必须共用 `translationKey`。
 - `headline` 为可选字段；若提供，则作为页面可见 `h1`，而 `title` 继续用于 HTML `<title>`、OG/Twitter 等 SEO 标题。
 - 公开文章必须 `draft: false`。
-- 日期字段必须明确：`pubDate`；更新事实信息时同步 `updatedDate`。
+- 日期字段必须明确：`pubDate`。只要对博客文件（frontmatter 或正文）有修改，必须同步 `updatedDate` 为修改当日（`YYYY-MM-DD`）；其中 `title` / `headline` / `description` / `summary` / canonical / hreflang 等 SEO 相关调整同样属于必更新场景。
 - 涉及价格/汇率的内容必须标注“数据日期 + 仅供参考”。
 - `service` 仅允许 schema 白名单值。
 - 新增语种时，若不改 `locales/registry`，系统会使用默认 UI 文案兜底；这是允许的。
@@ -80,6 +80,7 @@
 - `AGENT.md` 负责仓库级硬约束；具体博客工作流、review 流程、创建流程、翻译流程与检查顺序由 skill 承载。
 
 ## 8) Validation
+- 若改动了 `src/content/blog/**`：先执行 `npm run sync:updated-date`，确保本次改动文章的 `updatedDate` 已同步到当天。
 - 默认验证命令：`npm run build`。
 - 若改了页面渲染或样式：`npm run preview` 并人工抽查关键页面。
 - 若改了 SEO 逻辑或 `title` / `headline` / `description` / hreflang / canonical：检查页面源码中的 meta/link/json-ld 输出。

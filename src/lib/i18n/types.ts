@@ -10,6 +10,8 @@ export interface UiDictionary {
   allPosts: string;
   footer: string;
   articleBy: string;
+  publishedLabel: string;
+  updatedLabel: string;
   languageSwitch: string;
 }
 

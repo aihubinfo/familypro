@@ -15,7 +15,7 @@ Use this reference when creating a new post, rewriting an existing one, expandin
    - `title`: search-result-oriented title
    - `headline`: optional visible `h1` when wording should differ slightly from `title`
    - `description` and `summary`: concise, readable, and aligned with the actual article
-   - `updatedDate`: update when facts or operational guidance materially changed
+   - `updatedDate`: every blog edit must sync `updatedDate` to today's date (`YYYY-MM-DD`)
 4. Outline before drafting.
    - Decide the article argument/order first.
    - Aim for a clear `h1 -> h2 -> h3` shape, but only add `h3` where true substructure exists.
@@ -27,8 +27,13 @@ Use this reference when creating a new post, rewriting an existing one, expandin
 6. If the article contains commands, links, pricing, versions, or operational steps, verify them.
    - External links should default to `rel="nofollow"`.
    - If you write raw HTML anchors instead of Markdown links, keep `rel="nofollow"` explicit.
-   - If the post includes reference links, add a final `Related Links` section that lists those references.
+   - If the post includes reference links, add a final reference section that lists those references:
+     - non-Chinese: `## References`
+     - Chinese: `## 官方参考`
 7. Build and inspect.
+   - Run `npm run sync:updated-date` after blog edits.
+   - Run `npm run check:references` when the post cites references.
+   - Run `npm run build` before finishing.
 
 ## When rewriting an existing article
 

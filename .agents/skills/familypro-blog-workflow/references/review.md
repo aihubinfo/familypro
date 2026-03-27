@@ -22,6 +22,7 @@ Use this reference when the user asks to review, audit, inspect, or sanity-check
    - Are any sections thin, duplicated, or mechanically split?
 4. Frontmatter and multilingual integrity
    - `locale`, `translationKey`, `title`, `headline`, `description`, `summary`, dates
+   - If a blog file was edited, `updatedDate` should be synced to the actual edit date (`YYYY-MM-DD`)
    - locale-specific `title` / `description` length limits, including hard caps
    - Cross-language consistency without literal translation artifacts
 5. SEO basics
@@ -30,6 +31,12 @@ Use this reference when the user asks to review, audit, inspect, or sanity-check
    - hard-cap violations on `title` or `description` are findings, not style nits
    - external links defaulting to `rel="nofollow"`
    - likely canonical/hreflang/structured-data implications if relevant to the change
+6. Reference links section integrity
+   - If a post includes reference links, it must end with one final localized reference section:
+     - non-Chinese: `## References`
+     - Chinese: `## 官方参考`
+   - The final reference section should include links that were cited in the article body.
+   - For multi-post review, run `npm run check:references` and report failures as findings.
 
 ## Findings format
 
@@ -46,3 +53,4 @@ Use this reference when the user asks to review, audit, inspect, or sanity-check
 - Multilingual variants drift in meaning or over-translate
 - `title` and `h1` no longer describe the same page
 - English or Japanese `title` exceeds 70 characters, or `description` exceeds 160 characters
+- The article cites external references but does not end with localized final references (`## References` / `## 官方参考`)

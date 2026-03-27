@@ -6,10 +6,14 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "prebuild": "npm run sync:updated-date",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "sync:updated-date": "node scripts/sync-blog-updated-date.mjs",
+    "check:references": "node scripts/check-related-links.mjs",
+    "check:related-links": "npm run check:references"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.1",

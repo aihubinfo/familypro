@@ -12,5 +12,7 @@ export const en: UiDictionary = {
   allPosts: 'Blog Posts',
   footer: '© 2026 Subscription Savings Lab · Prices are for reference. Final checkout amount prevails.',
   articleBy: 'Author',
+  publishedLabel: 'Published',
+  updatedLabel: 'Updated',
   languageSwitch: 'Language',
 };

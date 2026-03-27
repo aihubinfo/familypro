@@ -38,14 +38,19 @@ You may need more than one reference file, but only load the ones relevant to th
 - Prefer content-only changes unless the task clearly requires a template or SEO logic change.
 - Treat Chinese and other languages as separate writing tasks, not literal sentence mapping.
 - Preserve shared facts, product claims, and `translationKey` consistency across languages.
+- Any blog file edit (frontmatter or body) must sync `updatedDate` to the current date (`YYYY-MM-DD`).
 - If facts, commands, links, or product behavior may have changed, verify them before writing.
-- If a post includes reference links, add a final "Related Links" section listing those references.
+- If a post includes reference links, it must end with a reference section:
+  - `## References` for non-Chinese posts
+  - `## 官方参考` for Chinese posts
 - Treat locale-specific SEO length hard caps as mandatory, not advisory. If `title` or `description` exceeds the hard cap for that language, rewrite it.
 - If the user asks for review, findings come first; do not silently rewrite content unless asked.
 
 ## Validation
 
+- After changing any file under `src/content/blog/**`, run `npm run sync:updated-date` first.
 - After content changes, run `npm run build`.
+- For posts with reference links, run `npm run check:references` to verify the final reference section exists and includes cited references.
 - If `title` or `description` was reviewed or edited, measure length explicitly against the locale-specific hard caps before finishing.
 - If `title`, `headline`, `description`, canonical, hreflang, or structured data changed, inspect generated output or built HTML.
 - If review is requested, validate by citing concrete file paths and line numbers.
