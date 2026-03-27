@@ -3,6 +3,7 @@ import type { UiDictionary } from '../types';
 export const ja: UiDictionary = {
   home: 'ホーム',
   blog: 'ブログ',
+  tableOfContents: '目次',
   heroEyebrow: 'SEO重視 / Markdown中心',
   heroTitle: 'サブスク節約ラボ',
   heroDesc:

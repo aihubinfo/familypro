@@ -50,7 +50,8 @@ const localeCode = getLocaleCode(currentLang);
 const siteName = getSiteName(currentLang);
 const visibleHeadline = post.data.headline ?? post.data.title;
 const activeLangs = collectSiteLangs(siteLangs);
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+const tocHeadings = headings.filter((heading) => heading.depth === 2);
 const getPostSlug = (id: string) => id.split('/').pop() ?? id;
 
 const rawBaseUrl = import.meta.env.BASE_URL;
@@ -136,9 +137,26 @@ const jsonLd = {
 
     {coverImageSrc && <img class="cover-image" src={coverImageSrc} alt={post.data.title} />}
 
-    <section class="markdown-body">
-      <Content />
-    </section>
+    <div class="article-shell">
+      {tocHeadings.length > 0 && (
+        <aside class="toc-card" aria-labelledby="toc-title">
+          <p id="toc-title" class="toc-title">{ui.tableOfContents}</p>
+          <nav aria-label={ui.tableOfContents}>
+            <ul class="toc-list">
+              {tocHeadings.map((heading) => (
+                <li class="toc-section">
+                  <a class="toc-link toc-link-h2" href={`#${heading.slug}`}>{heading.text}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </aside>
+      )}
+
+      <section class="markdown-body article-main">
+        <Content />
+      </section>
+    </div>
   </article>
 </BaseLayout>
 
@@ -182,10 +200,93 @@ const jsonLd = {
     object-fit: cover;
   }
 
+  .article-shell {
+    display: grid;
+    gap: 1.2rem;
+  }
+
+  .article-main {
+    min-width: 0;
+  }
+
   .markdown-body {
     background: #ffffff;
     border: 1px solid #dbe5ef;
     border-radius: 1rem;
     padding: 1rem;
+  }
+
+  .toc-card {
+    background: #f8fafc;
+    border: 1px solid #dbe5ef;
+    border-radius: 1rem;
+    padding: 0.92rem 0.9rem;
+    box-shadow: 0 6px 18px -20px rgba(15, 23, 42, 0.8);
+  }
+
+  .toc-title {
+    margin: 0 0 0.72rem;
+    color: #334155;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  .toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .toc-section {
+    margin: 0;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px dashed #e2e8f0;
+  }
+
+  .toc-section:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .toc-link {
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .toc-link-h2 {
+    color: #475569;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+
+  .toc-link:hover {
+    color: #0f766e;
+  }
+
+  :global(.markdown-body h2) {
+    scroll-margin-top: 6.5rem;
+  }
+
+  @media (min-width: 980px) {
+    .article-shell {
+      grid-template-columns: minmax(0, 1fr) 250px;
+      align-items: start;
+    }
+
+    .article-main {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .toc-card {
+      grid-column: 2;
+      grid-row: 1;
+      position: sticky;
+      top: 6.4rem;
+    }
   }
 </style>

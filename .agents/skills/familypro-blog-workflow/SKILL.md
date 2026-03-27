@@ -39,6 +39,7 @@ You may need more than one reference file, but only load the ones relevant to th
 - Treat Chinese and other languages as separate writing tasks, not literal sentence mapping.
 - Preserve shared facts, product claims, and `translationKey` consistency across languages.
 - If facts, commands, links, or product behavior may have changed, verify them before writing.
+- If a post includes reference links, add a final "Related Links" section listing those references.
 - Treat locale-specific SEO length hard caps as mandatory, not advisory. If `title` or `description` exceeds the hard cap for that language, rewrite it.
 - If the user asks for review, findings come first; do not silently rewrite content unless asked.
 

@@ -15,6 +15,7 @@ Use this reference when producing another language version of an article or loca
 - Main SEO keyword family
 - CTA and article intent
 - `translationKey`
+- If the post includes reference links, each language version should end with a `Related Links` section listing those references.
 
 ## What may change across languages
 

@@ -1,6 +1,7 @@
 export interface UiDictionary {
   home: string;
   blog: string;
+  tableOfContents: string;
   heroEyebrow: string;
   heroTitle: string;
   heroDesc: string;

@@ -3,11 +3,11 @@ locale: zh
 translationKey: grok-plan-guide
 title: Grok 套餐怎么选：X Premium、SuperGrok、Heavy 区别与购买建议
 headline: Grok 套餐别买错：先分清 X Premium、SuperGrok 和 Heavy 再下单
-description: 基于 2026 年 3 月 26 日可访问的 xAI 官网、X Help 与美国区 App Store 页面，梳理 Grok 在 X 站内和独立 App 的套餐线，讲清价格层级、已公开权益、未公开额度、买前最容易混淆的地方，以及不同用户该怎么买。
-summary: 如果你正在纠结 Grok 到底该买 X Premium、Premium+、SuperGrok 还是 SuperGrok Heavy，这篇文章会先把两条订阅线拆开，再讲清公开价格、能力边界和适合谁买。
+description: 基于 2026 年 3 月 27 日可访问的 xAI 官网、X Help 与美国区 App Store 页面，梳理 Grok 在 X 站内和独立 App 的套餐线，讲清价格层级、已公开权益、未公开额度、买前最容易混淆的地方，以及不同用户该怎么买。
+summary: 如果你正在纠结 Grok 到底该买 X Premium、Premium+、SuperGrok Lite、SuperGrok 还是 SuperGrok Heavy，这篇文章会先把两条订阅线拆开，再讲清公开价格、能力边界和适合谁买。
 category: AI 订阅对比
 pubDate: 2026-03-26
-updatedDate: 2026-03-26
+updatedDate: 2026-03-27
 author: Mark
 service: Grok
 tags:
@@ -19,14 +19,14 @@ tags:
 draft: false
 ---
 
-如果你最近在看 Grok 的付费方案，很容易越看越乱。因为你会同时看到 `X Premium`、`X Premium+`、`SuperGrok`、`SuperGrok Heavy` 这些名字，但它们并不是同一条产品线。
+如果你最近在看 Grok 的付费方案，很容易越看越乱。因为你会同时看到 `X Premium`、`X Premium+`、`SuperGrok Lite`、`SuperGrok`、`SuperGrok Heavy` 这些名字，但它们并不是同一条产品线。
 
 真正让人混淆的地方在于：有些 Grok 权益是绑在 `X` 平台里的，有些是绑定在 `Grok.com / Grok App` 里的；还有一些说明写的是 `higher limits`、`much higher rate limits`，却没有公开成一张固定配额表。你如果没先把这两条线拆开，很容易买成“社交平台会员”，却以为自己买的是“完整版 Grok”。
 
-截至 **2026 年 3 月 26 日**，基于当前可访问的 **xAI 官网、X Help 和美国区 App Store 页面**，Grok 相关套餐可以先按两类理解：
+截至 **2026 年 3 月 27 日**，基于当前可访问的 **xAI 官网、X Help 和美国区 App Store 页面**，Grok 相关套餐可以先按两类理解：
 
 - 一类是 **X 站内订阅**：`Basic`、`Premium`、`Premium+`
-- 一类是 **Grok 独立订阅**：免费版、`SuperGrok`、`SuperGrok Heavy`
+- 一类是 **Grok 独立订阅**：免费版、`SuperGrok Lite`、`SuperGrok`、`SuperGrok Heavy`
 
 这篇文章只回答四个问题：
 
@@ -47,6 +47,7 @@ draft: false
 如果你只想要一句话建议：
 
 - 想买的是 **X 会员 + 顺手用 Grok**：`Premium`
+- 想先用更低预算试独立 Grok：优先看 `SuperGrok Lite`（以你所在地区和账户可见档位为准）
 - 想买的是 **Grok 本体**：`SuperGrok`
 - 明确有 **高强度长推理 / 高频生成 / 重度撞限额**：`SuperGrok Heavy`
 - 你如果还在犹豫自己到底需不需要 `Heavy`，大概率暂时不需要
@@ -78,15 +79,16 @@ xAI 当前的消费者 FAQ 和官网页能确认两件事：
 - `Grok.com` 和手机 App 在**部分地区**提供 `limited free access`
 - 也提供 **paid subscription plans with full features of Grok unlocked**
 
-目前能从官网公开页稳定确认的独立层级，比较稳妥的写法是这三档：
+目前能从官网公开页和美国区 App Store 公开购买项确认到的独立层级，更稳妥的写法是“四层”：
 
 - **免费访问**：只是在部分地区开放，而且是 `limited free access`，不是所有用户、所有地区都能直接拿到完整功能
+- **SuperGrok Lite**：美国区 App Store 公开购买项可见的轻量付费档位；是否可见、价格和计费周期与地区/平台/账户有关
 - **SuperGrok**：面向独立网页和 App 的付费订阅；xAI 官方新闻页已经明确，`Grok 4` 当前向 `SuperGrok` 用户开放
 - **SuperGrok Heavy**：在 `SuperGrok` 之上额外开放 `Grok 4 Heavy`，并提供 `much higher rate limits`
 
 价格这部分要单独看，而且只能写到“公开页面目前能确认什么”的程度：
 
-- 美国区 App Store 当前公开页能看到 `SuperGrok USD 30`、`SuperGrok USD 300`、`SuperGrok Heavy USD 300` 这些 in-app purchase 金额
+- 美国区 App Store 当前公开页能看到 `SuperGrok Lite USD 10`、`SuperGrok Lite USD 100`、`SuperGrok USD 30`、`SuperGrok USD 300`、`SuperGrok Heavy USD 300` 这些 in-app purchase 金额
 - 但 App Store 的公开抓取页**没有把这些金额和具体计费周期一一对应展示出来**
 - 所以这些数字更适合被理解成“当前可见的购买金额”，不适合直接写成一张“月费 / 年费对比表”
 - 真正付款前，还是要回到你自己的 `Grok.com` 或 App 内结账页确认
@@ -138,7 +140,7 @@ xAI 当前的消费者 FAQ 和官网页能确认两件事：
 - `Think` / `DeepSearch` 的具体日额度
 - 图片生成和视频生成的明确次数
 - Voice / Live Camera 的时长或次数限制
-- 免费版、`Premium`、`Premium+`、`SuperGrok`、`Heavy` 之间的完整数值差
+- 免费版、`SuperGrok Lite`、`SuperGrok`、`Heavy`，以及 `Premium`、`Premium+` 之间的完整数值差
 
 这意味着你买 Grok 相关套餐时，判断逻辑要变一下：
 
@@ -236,6 +238,13 @@ xAI 当前在官网和 App Store 页面都在强调 `Voice Mode`、`Live Camera`
 
 ### 5.2 你买的其实是 AI 助手，而不是社交平台会员
 
+如果你主要在独立 App / 网页里用 Grok，又希望先用更低预算试用付费体验，先看 `SuperGrok Lite`（前提是你的地区和账户可见该档位）。
+
+- 它更像独立 Grok 线里的轻量入口
+- 是否可选、价格与计费周期仍要以下单页为准
+
+### 5.3 你已经明确会长期高频使用 Grok
+
 优先看 `SuperGrok`。
 
 这是大多数“我就是来用 Grok 的”用户更应该对比的一档，因为它的出发点是：
@@ -245,7 +254,7 @@ xAI 当前在官网和 App Store 页面都在强调 `Voice Mode`、`Live Camera`
 
 如果你主要使用入口就是独立网页或手机 App，这通常比 `X Premium+` 更对路。
 
-### 5.3 你已经知道自己会撞限额，或者明确要用 Grok 4 Heavy
+### 5.4 你已经知道自己会撞限额，或者明确要用 Grok 4 Heavy
 
 再看 `SuperGrok Heavy`。
 
@@ -260,14 +269,22 @@ xAI 当前在官网和 App Store 页面都在强调 `Voice Mode`、`Live Camera`
 
 ## 六、最后给一个不绕弯的购买建议
 
-- **预算敏感**：先用免费版，或者如果你本来就买 X 会员，再从 `Premium` 开始
+- **预算敏感**：先用免费版；如果你主要用独立 Grok，再看 `SuperGrok Lite`（若可见）
 - **主要在 X 里用 Grok**：从 `Premium` 或 `Premium+` 选
 - **主要在 Grok.com / App 里把它当主力 AI**：直接看 `SuperGrok`
 - **明确需要最高模型层级和更高 rate limits**：再上 `SuperGrok Heavy`
 
-对大多数人来说，真正的选择并不是“五选一”，而是先回答这两句：
+对大多数人来说，真正的选择不是“套餐名越多越难选”，而是先回答这两句：
 
 - 我买的是 **X 平台权益**，还是 **Grok 本体**
 - 我现在缺的是 **入口和模型层级**，还是已经开始缺 **rate limits**
 
 把这两个问题想明白以后，Grok 的套餐其实没有表面上那么乱。
+
+## Related Links
+
+- [xAI Consumer FAQs](https://x.ai/legal/faq)
+- [xAI News（含 Grok 4 / SuperGrok Heavy 公告）](https://x.ai/news)
+- [X Premium FAQ](https://help.x.com/en/using-x/x-premium-faq)
+- [About X Premium](https://help.x.com/en/using-x/x-premium)
+- [Grok - AI Chat & Video（US App Store）](https://apps.apple.com/us/app/grok-ai-chat-video/id6670324846)

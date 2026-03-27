@@ -3,6 +3,7 @@ import type { UiDictionary } from '../types';
 export const en: UiDictionary = {
   home: 'Home',
   blog: 'Blog',
+  tableOfContents: 'Contents',
   heroEyebrow: 'SEO-first / Markdown-driven',
   heroTitle: 'Subscription Savings Lab',
   heroDesc: 'We focus on AI and streaming subscriptions: setup guides, cost-saving strategies, regional price gaps, and deal/risk updates.',

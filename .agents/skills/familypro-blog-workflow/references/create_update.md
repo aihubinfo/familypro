@@ -27,6 +27,7 @@ Use this reference when creating a new post, rewriting an existing one, expandin
 6. If the article contains commands, links, pricing, versions, or operational steps, verify them.
    - External links should default to `rel="nofollow"`.
    - If you write raw HTML anchors instead of Markdown links, keep `rel="nofollow"` explicit.
+   - If the post includes reference links, add a final `Related Links` section that lists those references.
 7. Build and inspect.
 
 ## When rewriting an existing article
