@@ -62,7 +62,7 @@ X Help 当前把 `X Premium` 分成三档：
 | --- | --- | --- | --- |
 | Basic | $3/月 或 $32/年起 | 编辑帖子、长文、长视频、回复排序等基础权益 | 官方说明里没有把 Grok 当作核心卖点 |
 | Premium | $8/月 或 $84/年起 | 蓝标、较少广告、创作者变现资格、Media Studio 等 | `increased usage limits on Grok` |
-| Premium+ | $40/月 或 $395/年起 | 更少广告、最高回复排序、Radar、Articles 等 | `higher limits on Grok`，且 xAI 官方新闻页明确写 `Grok 4` 向 `Premium+` 开放 |
+| Premium+ | $40/月 或 $395/年起 | 更少广告、最高回复排序、Radar、Articles 等 | `higher limits on Grok`；[Grok 4 公告](https://x.ai/news/grok-4) 写向 `Premium+` 开放，但 [Grok 4.1 公告](https://x.ai/news/grok-4-1) 写向所有用户开放 |
 
 这条线最容易买错的点是：
 
@@ -83,7 +83,7 @@ xAI 当前的消费者 FAQ 和官网页能确认两件事：
 
 - **免费访问**：只是在部分地区开放，而且是 `limited free access`，不是所有用户、所有地区都能直接拿到完整功能
 - **SuperGrok Lite**：美国区 App Store 公开购买项可见的轻量付费档位；是否可见、价格和计费周期与地区/平台/账户有关
-- **SuperGrok**：面向独立网页和 App 的付费订阅；xAI 官方新闻页已经明确，`Grok 4` 当前向 `SuperGrok` 用户开放
+- **SuperGrok**：面向独立网页和 App 的付费订阅；[Grok 4 公告](https://x.ai/news/grok-4) 写向 `SuperGrok` 用户开放，但 [Grok 4.1 公告](https://x.ai/news/grok-4-1) 写向所有用户开放
 - **SuperGrok Heavy**：在 `SuperGrok` 之上额外开放 `Grok 4 Heavy`，并提供 `much higher rate limits`
 
 价格这部分要单独看，而且只能写到“公开页面目前能确认什么”的程度：
@@ -130,9 +130,12 @@ xAI 当前的消费者 FAQ 和官网页能确认两件事：
 
 - `Premium` 比普通用户有更高的 Grok 使用上限
 - `Premium+` 比 `Premium` 有更高的 Grok 上限
-- `Grok 4` 当前向 `SuperGrok` 和 `Premium+` 用户开放
+- [Grok 4 公告](https://x.ai/news/grok-4) 写明 `Grok 4` 向 `SuperGrok` 和 `Premium+` 开放
+- [Grok 4.1 公告](https://x.ai/news/grok-4-1) 写明 `Grok 4.1` 向 `grok.com`、`X`、`iOS/Android` 的所有用户开放
 - `SuperGrok Heavy` 额外给 `Grok 4 Heavy`
 - `SuperGrok Heavy` 还有 `much higher rate limits`
+
+这意味着，“能不能访问 4.x 模型”已经不再是区分所有付费档位的唯一标准，还要结合入口、限额和平台权益一起看。
 
 但官方目前没有在消费者页面稳定公开成固定表格的，至少包括这些：
 
@@ -284,7 +287,8 @@ xAI 当前在官网和 App Store 页面都在强调 `Voice Mode`、`Live Camera`
 ## 官方参考
 
 - [xAI Consumer FAQs](https://x.ai/legal/faq)
-- [xAI News（含 Grok 4 / SuperGrok Heavy 公告）](https://x.ai/news)
+- [xAI News: Introducing Grok 4](https://x.ai/news/grok-4)
+- [xAI News: Introducing Grok 4.1](https://x.ai/news/grok-4-1)
 - [X Premium FAQ](https://help.x.com/en/using-x/x-premium-faq)
 - [About X Premium](https://help.x.com/en/using-x/x-premium)
 - [Grok - AI Chat & Video（US App Store）](https://apps.apple.com/us/app/grok-ai-chat-video/id6670324846)

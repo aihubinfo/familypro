@@ -62,7 +62,7 @@ X Help currently describes three `X Premium` tiers:
 | --- | --- | --- | --- |
 | Basic | $3/month or $32/year starting price | Post editing, longer posts, longer video uploads, reply prioritization, and other baseline features | Grok is not presented as a core reason to buy |
 | Premium | $8/month or $84/year starting price | Checkmark, fewer ads, creator monetization eligibility, Media Studio, and more | `increased usage limits on Grok` |
-| Premium+ | $40/month or $395/year starting price | Highest reply prioritization, broader ad reduction, Radar, Articles, and more | `higher limits on Grok`, and xAI’s Grok 4 announcement says `Grok 4` is available to `Premium+` subscribers |
+| Premium+ | $40/month or $395/year starting price | Highest reply prioritization, broader ad reduction, Radar, Articles, and more | `higher limits on Grok`; the [Grok 4 announcement](https://x.ai/news/grok-4) says `Grok 4` is available to `Premium+`, while the [Grok 4.1 announcement](https://x.ai/news/grok-4-1) says `Grok 4.1` is available to all users |
 
 This is where many buyers get turned around:
 
@@ -83,7 +83,7 @@ The most defensible way to describe the public standalone Grok lineup right now,
 
 - **Free access**: location-dependent, limited, and not the same thing as getting the full Grok feature set everywhere
 - **SuperGrok Lite**: a lighter paid standalone tier that is visible in the US App Store purchase list; availability, pricing, and billing period still vary by region, platform, and account
-- **SuperGrok**: the paid standalone Grok subscription for web and mobile; xAI’s Grok 4 announcement explicitly says `Grok 4` is available to `SuperGrok` users
+- **SuperGrok**: the paid standalone Grok subscription for web and mobile; the [Grok 4 announcement](https://x.ai/news/grok-4) says `Grok 4` is available to `SuperGrok`, while the [Grok 4.1 announcement](https://x.ai/news/grok-4-1) says `Grok 4.1` is available to all users
 - **SuperGrok Heavy**: the higher-end Grok subscription that adds `Grok 4 Heavy` and `much higher rate limits`
 
 Pricing is where you need to be more careful than the public pages make it seem:
@@ -130,9 +130,12 @@ What is public enough to treat as confirmed today:
 
 - `Premium` has higher Grok usage limits than the standard experience on X
 - `Premium+` has higher Grok limits than `Premium`
-- `Grok 4` is available to `SuperGrok` and `Premium+` subscribers
+- The [Grok 4 announcement](https://x.ai/news/grok-4) says `Grok 4` is available to `SuperGrok` and `Premium+` subscribers
+- The [Grok 4.1 announcement](https://x.ai/news/grok-4-1) says `Grok 4.1` is available to all users on `grok.com`, `X`, and `iOS/Android`
 - `SuperGrok Heavy` adds `Grok 4 Heavy`
 - `SuperGrok Heavy` also comes with `much higher rate limits`
+
+So access to a 4.x model is no longer a clean standalone way to separate every paid tier; entry point, limits, and platform benefits still matter.
 
 What is still not published as a stable full comparison table, at least on the consumer-facing pages:
 
@@ -279,7 +282,8 @@ Once you answer those two questions, Grok’s plan structure becomes much easier
 ## References
 
 - [xAI Consumer FAQs](https://x.ai/legal/faq)
-- [xAI News (includes the Grok 4 / SuperGrok Heavy announcement)](https://x.ai/news)
+- [xAI News: Introducing Grok 4](https://x.ai/news/grok-4)
+- [xAI News: Introducing Grok 4.1](https://x.ai/news/grok-4-1)
 - [X Premium FAQ](https://help.x.com/en/using-x/x-premium-faq)
 - [About X Premium](https://help.x.com/en/using-x/x-premium)
 - [Grok - AI Chat & Video (US App Store)](https://apps.apple.com/us/app/grok-ai-chat-video/id6670324846)
