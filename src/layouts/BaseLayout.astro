@@ -50,6 +50,13 @@ const {
 
 const rawBaseUrl = import.meta.env.BASE_URL;
 const baseUrl = rawBaseUrl.endsWith('/') ? rawBaseUrl : `${rawBaseUrl}/`;
+const canonicalOrigin = new URL(canonical).origin;
+const faviconSvgHref = new URL(`${baseUrl}favicon.svg`, canonicalOrigin).toString();
+const faviconIcoHref = new URL(`${baseUrl}favicon.ico`, canonicalOrigin).toString();
+const faviconPng48Href = new URL(`${baseUrl}favicon-48x48.png`, canonicalOrigin).toString();
+const faviconPng96Href = new URL(`${baseUrl}favicon-96x96.png`, canonicalOrigin).toString();
+const appleTouchIconHref = new URL(`${baseUrl}apple-touch-icon.png`, canonicalOrigin).toString();
+const manifestHref = new URL(`${baseUrl}site.webmanifest`, canonicalOrigin).toString();
 const sitemapHref = `${baseUrl}sitemap-index.xml`;
 ---
 
@@ -71,8 +78,12 @@ const sitemapHref = `${baseUrl}sitemap-index.xml`;
       jsonLd={jsonLd}
     />
     <GoogleVerification />
-    <link rel="icon" type="image/svg+xml" href={`${baseUrl}favicon.svg`} />
-    <link rel="icon" href={`${baseUrl}favicon.ico`} />
+    <link rel="icon" type="image/svg+xml" href={faviconSvgHref} />
+    <link rel="icon" type="image/png" sizes="96x96" href={faviconPng96Href} />
+    <link rel="icon" type="image/png" sizes="48x48" href={faviconPng48Href} />
+    <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIconHref} />
+    <link rel="shortcut icon" href={faviconIcoHref} />
+    <link rel="manifest" href={manifestHref} />
     <link rel="sitemap" href={sitemapHref} />
   </head>
   <body>
