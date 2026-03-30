@@ -1,13 +1,13 @@
 ---
 locale: zh
 translationKey: grok-plan-guide
-title: Grok 套餐怎么选：X Premium、SuperGrok、Heavy 区别与购买建议
+title: 2026 Grok 套餐指南：X Premium、SuperGrok、Heavy
 headline: Grok 套餐别买错：先分清 X Premium、SuperGrok 和 Heavy 再下单
 description: 基于 2026 年 3 月 27 日可访问的 xAI 官网、X Help 与美国区 App Store 页面，梳理 Grok 在 X 站内和独立 App 的套餐线，讲清价格层级、已公开权益、未公开额度、买前最容易混淆的地方，以及不同用户该怎么买。
 summary: 如果你正在纠结 Grok 到底该买 X Premium、Premium+、SuperGrok Lite、SuperGrok 还是 SuperGrok Heavy，这篇文章会先把两条订阅线拆开，再讲清公开价格、能力边界和适合谁买。
 category: AI 订阅对比
 pubDate: 2026-03-26
-updatedDate: 2026-03-27
+updatedDate: 2026-03-30
 author: Mark
 service: Grok
 tags:

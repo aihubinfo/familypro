@@ -1,13 +1,13 @@
 ---
 locale: en
 translationKey: grok-plan-guide
-title: "Grok Plans Explained: X Premium vs SuperGrok vs Heavy"
+title: "Grok Plan Guide 2026: X Premium+, SuperGrok, and Heavy"
 headline: How to choose between X Premium, SuperGrok, and Heavy
 description: Checked against xAI pages, X Help, and US App Store data on March 27, 2026. See how X Premium, SuperGrok Lite, SuperGrok, and Heavy differ and who each is for.
 summary: If you are trying to decide between X Premium, Premium+, SuperGrok Lite, SuperGrok, and SuperGrok Heavy, this guide explains the two plan lines, the public pricing signals, the unclear parts, and who should buy each one.
 category: AI Subscription Comparisons
 pubDate: 2026-03-26
-updatedDate: 2026-03-27
+updatedDate: 2026-03-30
 author: Mark
 service: Grok
 tags:
