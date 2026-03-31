@@ -35,14 +35,10 @@ Use this reference when producing another language version of an article or loca
 - Prefer the same core keywords with wording adapted to the language.
 - If `headline` is used, it should improve page readability, not drift away from the search intent in `title`.
 
-## Chinese-specific bar
+## Language-quality bar (all target languages)
 
-- Chinese output should feel like a native blog draft, not a translation artifact.
+- Output should feel like a native blog draft in the target language, not a translation artifact.
 - Avoid stiff connectors, stacked buzzwords, and repetitive summary language.
 - Prefer direct, concrete phrasing over explanatory padding.
-
-## English and other language bar
-
-- Write for how technical readers in that language scan and trust content.
-- Do not preserve Chinese sentence logic if it makes the target language feel translated.
+- Apply `language-clarity.md` when polishing localized output for fluency and ambiguity reduction.
 - Keep commands and configuration examples exact even when surrounding prose is localized.

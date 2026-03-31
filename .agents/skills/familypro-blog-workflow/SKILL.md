@@ -30,6 +30,7 @@ Read `src/pages/[lang]/blog/[slug].astro` only when the task involves `title`, `
 - For multilingual translation or localization: read [translate_localize.md](references/translate_localize.md)
 - For review-only work: read [review.md](references/review.md)
 - For frontmatter, title, headline, or SEO-specific adjustments: read [seo_frontmatter.md](references/seo_frontmatter.md)
+- For language fluency/clarity polishing (smooth phrasing, ambiguity reduction): read [language-clarity.md](references/language-clarity.md)
 
 You may need more than one reference file, but only load the ones relevant to the current task.
 
@@ -37,6 +38,7 @@ You may need more than one reference file, but only load the ones relevant to th
 
 - Prefer content-only changes unless the task clearly requires a template or SEO logic change.
 - Treat Chinese and other languages as separate writing tasks, not literal sentence mapping.
+- For writing/rewriting/localization tasks in any language, apply the default checklist in `references/language-clarity.md` unless the user requests a specific voice that conflicts with it.
 - Preserve shared facts, product claims, and `translationKey` consistency across languages.
 - Any blog file edit (frontmatter or body) must sync `updatedDate` to the current date (`YYYY-MM-DD`).
 - If facts, commands, links, or product behavior may have changed, verify them before writing.

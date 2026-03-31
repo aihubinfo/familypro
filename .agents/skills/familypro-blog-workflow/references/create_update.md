@@ -25,6 +25,7 @@ Use this reference when creating a new post, rewriting an existing one, expandin
    - Preserve facts and user intent.
    - Improve flow, transitions, and section boundaries when the original structure is weak.
    - Remove fluff, repeated summaries, and generic “AI-sounding” filler.
+   - Apply `language-clarity.md` for sentence-level fluency and ambiguity checks in the target language.
 6. If the article contains commands, links, pricing, versions, or operational steps, verify them.
    - Google-facing baseline: write for an intended audience first, not for search-engine-first filler.
    - Make the first screen explicit about what problem is solved, for whom, and what readers can do after finishing.
@@ -53,6 +54,7 @@ Use this reference when creating a new post, rewriting an existing one, expandin
 ## Output quality bar
 
 - The article should read like a deliberate post by a human operator or developer.
+- Output should read naturally to native readers of the target language: smooth phrasing, clear referents, and low ambiguity.
 - Commands should be copyable.
 - The intro should tell the reader what problem the post solves and who it is for.
 - The conclusion should close the loop instead of restating the entire article.

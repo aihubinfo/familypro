@@ -20,6 +20,7 @@ Use this reference when the user asks to review, audit, inspect, or sanity-check
 3. Structure and readability
    - Does the `h1 -> h2 -> h3` structure reflect the actual argument?
    - Are any sections thin, duplicated, or mechanically split?
+   - For posts in any language, check sentence-level ambiguity (unclear referents, overloaded long sentences, missing subject/object) using `language-clarity.md`.
 4. Frontmatter and multilingual integrity
    - `locale`, `translationKey`, `title`, `headline`, `description`, `summary`, dates
    - If a blog file was edited, `updatedDate` should be synced to the actual edit date (`YYYY-MM-DD`)

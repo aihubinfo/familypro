@@ -7,7 +7,7 @@ description: Checked against xAI pages, X Help, and US App Store data on March 2
 summary: If you are trying to decide between X Premium, Premium+, SuperGrok Lite, SuperGrok, and SuperGrok Heavy, this guide explains the two plan lines, the public pricing signals, the unclear parts, and who should buy each one.
 category: AI Subscription Comparisons
 pubDate: 2026-03-26
-updatedDate: 2026-03-30
+updatedDate: 2026-03-31
 author: Mark
 service: Grok
 tags:
@@ -19,25 +19,25 @@ tags:
 draft: false
 ---
 
-If you have been looking at Grok plans lately, the confusing part is not the number of names. It is that those names do not all belong to the same subscription line.
+If you have looked at Grok plans lately, the confusion is not the number of names. The confusion is that those names do not belong to one subscription line.
 
 You will see `X Premium`, `X Premium+`, `SuperGrok Lite`, `SuperGrok`, and `SuperGrok Heavy` discussed together as if they are interchangeable. They are not. Some Grok benefits live inside the X platform subscription stack. Others belong to the standalone `Grok.com` and Grok app experience. On top of that, many public descriptions still use phrases like `higher limits` and `much higher rate limits` instead of giving a clean quota table.
 
-As of **March 27, 2026**, based on currently accessible **xAI pages, X Help, and the US App Store listing**, it is easiest to understand Grok plans as two separate families:
+As of **March 27, 2026**, based on accessible **xAI pages, X Help, and the US App Store listing**, it is easiest to split Grok plans into two families:
 
 - **X subscriptions**: `Basic`, `Premium`, and `Premium+`
 - **Standalone Grok subscriptions**: location-dependent free access, `SuperGrok Lite`, `SuperGrok`, and `SuperGrok Heavy`
 
 This guide answers four practical questions:
 
-- What Grok plan lines actually exist right now?
+- What Grok plan lines exist right now?
 - Which pricing and feature details are publicly confirmed?
 - Which limits are still not published as fixed numbers?
-- Which plan should you buy without paying for the wrong thing?
+- Which plan should you buy to avoid paying for the wrong thing?
 
-For pricing, I am using **US pricing and publicly visible US App Store amounts** as the reference point. Actual checkout prices vary by region and platform, and the final purchase screen should always be treated as the source of truth.
+For pricing, this guide uses **US pricing and publicly visible US App Store amounts** as the reference point. Actual checkout prices vary by region and platform, and the final purchase screen should always be treated as the source of truth.
 
-## 1. Start With The Bottom Line: First Decide Whether You Are Buying X Or Buying Grok
+## 1. Start with the bottom line: decide whether you are buying X or Grok
 
 - **If you mainly use Grok inside X**, and you also care about things like the checkmark, fewer ads, and X publishing features, start with `Premium` and `Premium+`.
 - **If Grok itself is the product you care about**, and you mostly use `Grok.com` or the mobile app as an AI assistant, start with `SuperGrok`.
@@ -50,7 +50,7 @@ If you only want a one-line recommendation:
 - Buying **standalone Grok on a tighter budget**: check `SuperGrok Lite` first (if it is visible in your region/account)
 - Buying **Grok itself**: `SuperGrok`
 - Buying **the highest Grok tier for heavy use**: `SuperGrok Heavy`
-- If you are still unsure whether you need `Heavy`, you probably do not need it yet
+- If you are still unsure whether you need `Heavy`, you probably do not need it yet.
 
 ## 2. Grok Is Not One Subscription Line
 
@@ -95,7 +95,7 @@ Pricing is where you need to be more careful than the public pages make it seem:
 
 That is one of the big differences between Grok and something like Google AI or Claude. The hierarchy is visible, but the public pricing and quota details are not packaged into one neat comparison table.
 
-## 3. The Three Things That Actually Determine Whether A Grok Plan Is Worth It
+## 3. The three things that actually determine whether a Grok plan is worth it
 
 ### 3.1 Are you buying Grok inside X, or Grok as a standalone assistant?
 
@@ -122,11 +122,11 @@ The practical distinction is simple:
 - `X Premium` is **X membership that includes better Grok access**
 - `SuperGrok` is **the standalone Grok subscription itself**
 
-### 3.2 xAI publicly shows access tiers more clearly than it shows hard quotas
+### 3.2 xAI currently shows access tiers more clearly than hard quotas
 
 If you are used to AI subscription pages with detailed per-day or per-month quota tables, Grok feels different. xAI’s public consumer-facing pages still expose relatively few hard numbers.
 
-What is public enough to treat as confirmed today:
+What is public enough to treat as confirmed as of **March 27, 2026**:
 
 - `Premium` has higher Grok usage limits than the standard experience on X
 - `Premium+` has higher Grok limits than `Premium`
@@ -174,7 +174,7 @@ But if you are already running into the following situations, `Heavy` starts to 
 - you want Grok to spend materially longer on harder problems
 - you are using Grok as a serious research or development tool rather than a casual chatbot
 
-## 4. Which Grok Capabilities Matter To Which Users?
+## 4. Which Grok capabilities matter to which users?
 
 This section is not about marketing labels. It is about practical fit. Public Grok pages mention a lot of capabilities, but not every capability matters to every buyer.
 
@@ -228,7 +228,7 @@ The real buying question, though, is not whether those capabilities exist. It is
 
 If you only generate visuals once in a while, a standard paid tier may already be enough. Higher-end tiers become much easier to justify when images or video are part of a recurring creative workflow.
 
-## 5. Which Plan Should You Actually Buy?
+## 5. Which plan should you actually buy?
 
 ### 5.1 You mainly live on X and want Grok to be better there
 
@@ -250,7 +250,7 @@ If you mainly use standalone Grok on web or mobile and want a lower-cost paid en
 
 Start with `SuperGrok`.
 
-For most people whose actual intent is “I want to use Grok seriously,” this is the more natural comparison point because it is built around:
+For most people whose actual intent is “I want to use Grok seriously,” this is the more natural default comparison point because it is built around:
 
 - using Grok on `Grok.com` and in the mobile app
 - paying for Grok itself rather than wrapping Grok inside an X membership package
@@ -272,6 +272,16 @@ If you cannot clearly explain why you need `Heavy`, starting with `SuperGrok` is
 
 ## 6. Final Recommendation
 
+### 6.1 Optional lower-cost path for SuperGrok trial users
+
+If you have already decided to buy `SuperGrok`, it can be worth comparing a third-party group-buy option as well. Based on the current FamilyPro product-page display, there are two purchase modes:
+
+- Solo plan: listed at about **30% lower** than official pricing
+- 4-person shared plan: listed at **US$5.99**, which is more suitable for low-cost trial users
+
+Price data date: **March 31, 2026**. The numbers above are for reference only. Always confirm the latest price and available package options on the final checkout page.  
+Purchase link: <a href="https://familypro.io/en/products/grok?invite=7Dfd94eb" rel="nofollow">FamilyPro Super Grok purchase page (solo / 4-person shared)</a>
+
 For most buyers, this is not about counting plan names. It is a two-step decision:
 
 - Are you buying **X platform benefits with some Grok advantages**, or **Grok itself**?
@@ -287,3 +297,4 @@ Once you answer those two questions, Grok’s plan structure becomes much easier
 - [X Premium FAQ](https://help.x.com/en/using-x/x-premium-faq)
 - [About X Premium](https://help.x.com/en/using-x/x-premium)
 - [Grok - AI Chat & Video (US App Store)](https://apps.apple.com/us/app/grok-ai-chat-video/id6670324846)
+- [FamilyPro Super Grok purchase page (solo / 4-person shared)](https://familypro.io/en/products/grok?invite=7Dfd94eb)
