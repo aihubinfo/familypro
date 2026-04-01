@@ -12,9 +12,9 @@
   <rect x="154" y="620" width="352" height="138" rx="28" fill="#ffffff" fill-opacity=".72"/>
   <rect x="534" y="620" width="352" height="138" rx="28" fill="#ffffff" fill-opacity=".72"/>
   <rect x="914" y="620" width="352" height="138" rx="28" fill="#ffffff" fill-opacity=".72"/>
-  <text x="154" y="193" fill="#0F766E" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3">SUBSCRIPTION SAVINGS LAB</text>
-  <text x="154" y="300" fill="#0F172A" font-family="Arial, sans-serif" font-size="64" font-weight="700">AI and Streaming Guides</text>
-  <text x="154" y="356" fill="#0F172A" font-family="Arial, sans-serif" font-size="64" font-weight="700">Pricing, usage, and updates</text>
+  <text x="154" y="193" fill="#0F766E" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3">AI SUBSCRIPTIONS &amp; TOOLS GUIDE</text>
+  <text x="154" y="300" fill="#0F172A" font-family="Arial, sans-serif" font-size="64" font-weight="700">AI Subscriptions &amp; Tools Guide</text>
+  <text x="154" y="356" fill="#0F172A" font-family="Arial, sans-serif" font-size="64" font-weight="700">Plans, tools, and update notes</text>
   <defs>
     <linearGradient id="paint0_linear" x1="64" y1="64" x2="1536" y2="836" gradientUnits="userSpaceOnUse">
       <stop stop-color="#E0F2FE"/>

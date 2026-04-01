@@ -126,8 +126,8 @@ const sitemapHref = `${baseUrl}sitemap-index.xml`;
     --text: #1f2937;
     --muted: #64748b;
     --line: #dbe5ef;
-    --brand: #0f766e;
-    --brand-soft: #ccfbf1;
+    --brand: #2563eb;
+    --brand-soft: #dbeafe;
   }
 
   * {
@@ -137,7 +137,7 @@ const sitemapHref = `${baseUrl}sitemap-index.xml`;
   body {
     margin: 0;
     font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    background: linear-gradient(180deg, #eef5ff 0%, var(--bg) 35%, #f6fbf8 100%);
+    background: linear-gradient(180deg, #eef5ff 0%, var(--bg) 35%, #eff6ff 100%);
     color: var(--text);
     line-height: 1.75;
   }
@@ -188,9 +188,9 @@ const sitemapHref = `${baseUrl}sitemap-index.xml`;
   }
 
   .lang-links a.active {
-    color: #0f766e;
-    border-color: #67e8f9;
-    background: #f0fdfa;
+    color: var(--brand);
+    border-color: #93c5fd;
+    background: var(--brand-soft);
     font-weight: 700;
   }
 
@@ -199,6 +199,7 @@ const sitemapHref = `${baseUrl}sitemap-index.xml`;
     font-weight: 800;
     text-decoration: none;
     letter-spacing: 0.02em;
+    font-size: 24px;
   }
 
   nav {
@@ -238,7 +239,7 @@ const sitemapHref = `${baseUrl}sitemap-index.xml`;
   }
 
   :global(a) {
-    color: #0f766e;
+    color: var(--brand);
   }
 
   :global(table) {
@@ -259,7 +260,7 @@ const sitemapHref = `${baseUrl}sitemap-index.xml`;
   }
 
   :global(th) {
-    background: #f0fdf8;
+    background: #eff6ff;
   }
 
   :global(tr:last-child td) {

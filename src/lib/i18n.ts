@@ -51,30 +51,30 @@ export function collectSiteLangs(locales: string[]): Lang[] {
 
 export function buildHomeTitle(lang: Lang, siteName: string): string {
   if (lang === 'zh') {
-    return `${siteName} | AI 与流媒体订阅省钱指南`;
+    return `${siteName} | AI产品订阅、价格对比与工具选型`;
   }
   if (lang === 'ja') {
-    return `${siteName} | AI・動画配信サブスク料金比較と節約戦略を網羅した完全実践ガイド保存版`;
+    return `${siteName} | AIサブスク料金比較とツール選定の実践ガイド`;
   }
-  return `${siteName} | AI & Streaming Subscription Guides`;
+  return `${siteName} | Compare AI Plans and Choose Tools`;
 }
 
 export function buildBlogIndexTitle(lang: Lang, siteName: string, listLabel: string): string {
   if (lang === 'zh') {
-    return `${listLabel} | AI 与流媒体订阅价格对比和省钱指南`;
+    return `${listLabel} | AI订阅价格对比与工具指南`;
   }
   if (lang === 'ja') {
-    return `${listLabel} | AI・動画配信サブスクの料金比較、税金、為替、節約戦略を網羅した実践ガイド集`;
+    return `${listLabel} | AIサブスク比較とツール活用ガイド`;
   }
-  return `AI & Streaming Subscription Blog Posts | ${siteName}`;
+  return `AI Subscription and Tool Guides | ${siteName}`;
 }
 
 export function buildBlogIndexDescription(lang: Lang, listLabel: string): string {
   if (lang === 'zh') {
-    return '汇总 AI 与流媒体订阅的价格对比、税费与汇率口径、支付方式差异和风控提示，帮助你按统一口径评估年度总成本并选择更稳妥的省钱方案。';
+    return '汇总 AI 订阅与工具选型的价格对比、功能差异、税费与汇率口径、支付方式和风控提示，帮助你按统一标准评估总成本并做出更稳妥决策。';
   }
   if (lang === 'ja') {
-    return 'AI と動画配信サブスクの料金比較に加え、税金や為替の扱い、決済手段ごとの手数料差、地域別の実質コスト、運用時のリスク管理までを同じ基準で整理し、年間総コストを下げるために必要な判断材料と実行ステップを、初めてでも実践できる形でわかりやすく提供します。';
+    return 'AIサブスクとツール選定に関する価格比較、機能差、税金・為替の見方、決済手段ごとの注意点、運用時のリスク管理を同じ基準で整理し、実行しやすい判断材料を提供します。';
   }
-  return `Regional guides for ${listLabel.toLowerCase()} covering price comparisons, tax and FX context, payment-path tradeoffs, and practical steps to lower annual cost with lower risk.`;
+  return `Practical ${listLabel.toLowerCase()} covering AI plan pricing, tool comparisons, tax and FX context, payment-path tradeoffs, and safer renewal decisions.`;
 }

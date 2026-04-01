@@ -19,7 +19,7 @@ const blog = defineCollection({
     coverImage: z.string().optional(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    author: z.string().default('Mark'),
+    author: z.string().default('Huge'),
     service: z.string().default('General'),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),

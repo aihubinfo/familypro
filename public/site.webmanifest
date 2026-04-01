@@ -1,6 +1,6 @@
 {
-  "name": "Subscription Savings Lab",
-  "short_name": "Savings Lab",
+  "name": "AI Subscriptions & Tools Guide",
+  "short_name": "AI Tools Guide",
   "icons": [
     {
       "src": "favicon-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#2563eb",
   "background_color": "#ffffff",
   "display": "standalone",
   "start_url": ".",

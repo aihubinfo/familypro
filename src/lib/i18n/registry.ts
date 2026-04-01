@@ -7,19 +7,19 @@ export const LANGUAGE_REGISTRY = {
   zh: {
     label: '中文',
     localeCode: 'zh-CN',
-    siteName: '订阅省钱研究所',
+    siteName: 'AI订阅与工具指南',
     ui: zh,
   },
   en: {
     label: 'English',
     localeCode: 'en',
-    siteName: 'Subscription Savings Lab',
+    siteName: 'AI Subscriptions & Tools Guide',
     ui: en,
   },
   ja: {
     label: '日本語',
     localeCode: 'ja',
-    siteName: 'サブスク節約ラボ',
+    siteName: 'AIサブスク＆ツールガイド',
     ui: ja,
   },
 } as const satisfies Record<string, LanguageDescriptor>;
