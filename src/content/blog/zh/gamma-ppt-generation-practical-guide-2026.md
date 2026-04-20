@@ -7,7 +7,7 @@ description: 从「期望约束」到两条创建路径（文本新建 / 模板 
 summary: 先写清期望，再选对入口；创建阶段可对照下文参数表填写「听众、语气、页数、配图策略」等，减少生成后与预期不符的返工。
 category: AI工具
 pubDate: 2026-04-02
-updatedDate: 2026-04-02
+updatedDate: 2026-04-20
 author: Huge
 service: General
 tags:
@@ -243,7 +243,7 @@ REST API 需要 API Key，且官方说明 **API 使用**面向 **Pro / Ultra / T
 
 ## 官方参考
 
-- [FamilyPro：Gamma 相关产品页](https://familypro.io/en/products/gamma)
+- [FamilyPro：Gamma 相关产品页](https://familypro.io/en/products/gamma?invite=YK868462)
 - [How do I create a new presentation, document, or webpage in Gamma?](https://help.gamma.app/en/articles/7838093-how-do-i-create-a-new-presentation-document-or-webpage-in-gamma)（Generate / Paste / Import）
 - [Generate from text（API 参数说明，可与网页高级选项对照）](https://developers.gamma.app/guides/generate-api-parameters-explained)
 - [Output language accepted values（`language` 可选语言代码）](https://developers.gamma.app/reference/output-language-accepted-values)

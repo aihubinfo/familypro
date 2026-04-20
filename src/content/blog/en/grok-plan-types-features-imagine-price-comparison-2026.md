@@ -7,7 +7,7 @@ description: This guide compares Free Grok, SuperGrok, and SuperGrok Heavy, expl
 summary: From Free Grok to SuperGrok Heavy, this article explains plan differences, official pricing, and whether upgrading is worth it.
 category: Grok
 pubDate: 2026-04-01
-updatedDate: 2026-04-01
+updatedDate: 2026-04-20
 author: Huge
 service: General
 tags:
@@ -149,4 +149,4 @@ Use this decision flow:
 ## References
 
 - xAI / Grok official plans page: [https://grok.com/plans](https://grok.com/plans)
-- FamilyPro Grok purchase page: [https://familypro.io/en/products/grok](https://familypro.io/en/products/grok)
+- FamilyPro Grok purchase page: [https://familypro.io/en/products/grok?invite=YK868462](https://familypro.io/en/products/grok?invite=YK868462)

@@ -7,7 +7,7 @@ description: "Gamma guide: define your brief, then create from text (Generate/Pa
 summary: "Start with a clear brief, then pick the right entry point. Use the parameter tables below for audience, tone, card count, and image strategy so the first generation lands closer to what you expect."
 category: AI Tools
 pubDate: 2026-04-02
-updatedDate: 2026-04-02
+updatedDate: 2026-04-20
 author: Huge
 service: General
 tags:
@@ -243,7 +243,7 @@ Use **/** for blocks and **Insert** for media—evidence, not a substitute for o
 
 ## References
 
-- [FamilyPro: Gamma product page](https://familypro.io/en/products/gamma)
+- [FamilyPro: Gamma product page](https://familypro.io/en/products/gamma?invite=YK868462)
 - [How do I create a new presentation, document, or webpage in Gamma?](https://help.gamma.app/en/articles/7838093-how-do-i-create-a-new-presentation-document-or-webpage-in-gamma) (Generate / Paste / Import)
 - [Generate from text (API parameter reference, maps to Advanced options)](https://developers.gamma.app/guides/generate-api-parameters-explained)
 - [Output language accepted values (`language` codes)](https://developers.gamma.app/reference/output-language-accepted-values)

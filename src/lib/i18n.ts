@@ -56,6 +56,9 @@ export function buildHomeTitle(lang: Lang, siteName: string): string {
   if (lang === 'ja') {
     return `${siteName} | AIサブスク料金比較とツール選定の実践ガイド`;
   }
+  if (lang === 'ar') {
+    return `${siteName} | مقارنة اشتراكات الذكاء الاصطناعي واختيار الأدوات`;
+  }
   return `${siteName} | Compare AI Plans and Choose Tools`;
 }
 
@@ -66,6 +69,9 @@ export function buildBlogIndexTitle(lang: Lang, siteName: string, listLabel: str
   if (lang === 'ja') {
     return `${listLabel} | AIサブスク比較とツール活用ガイド`;
   }
+  if (lang === 'ar') {
+    return `${listLabel} | دليل اشتراكات وأدوات الذكاء الاصطناعي`;
+  }
   return `AI Subscription and Tool Guides | ${siteName}`;
 }
 
@@ -75,6 +81,9 @@ export function buildBlogIndexDescription(lang: Lang, listLabel: string): string
   }
   if (lang === 'ja') {
     return 'AIサブスクとツール選定に関する価格比較、機能差、税金・為替の見方、決済手段ごとの注意点、運用時のリスク管理を同じ基準で整理し、実行しやすい判断材料を提供します。';
+  }
+  if (lang === 'ar') {
+    return 'محتوى عملي لمقارنة اشتراكات وأدوات الذكاء الاصطناعي: فروق الأسعار والميزات، سياق الضرائب وسعر الصرف، خيارات الدفع، وكيفية اتخاذ قرار تجديد أكثر أمانًا.';
   }
   return `Practical ${listLabel.toLowerCase()} covering AI plan pricing, tool comparisons, tax and FX context, payment-path tradeoffs, and safer renewal decisions.`;
 }

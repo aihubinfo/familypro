@@ -7,7 +7,7 @@ description: "X Premium vs Grok SuperGrok: two products, two bills. Grok by X ti
 summary: "Clarifies bundled Grok on X versus standalone SuperGrok—different invoice, different limits—and how to avoid buying the wrong plan."
 category: Grok
 pubDate: 2026-04-10
-updatedDate: 2026-04-10
+updatedDate: 2026-04-20
 author: Huge
 service: General
 tags:
@@ -136,7 +136,7 @@ In short: **Premium+** is not “just Grok”—it is top X experience plus stro
 
 ## References
 
-- FamilyPro — Grok: <a href="https://familypro.io/en/products/grok" rel="nofollow">https://familypro.io/en/products/grok</a>
+- FamilyPro — Grok: <a href="https://familypro.io/en/products/grok?invite=YK868462" rel="nofollow">https://familypro.io/en/products/grok?invite=YK868462</a>
 - Grok plans (grok.com): <a href="https://grok.com/plans" rel="nofollow">https://grok.com/plans</a>
 - X Premium signup (x.com): <a href="https://x.com/i/premium_sign_up" rel="nofollow">https://x.com/i/premium_sign_up</a>
 - X Help Center — Premium+ price adjustment (regional tables, updated over time): <a href="https://help.x.com/en/premium-plus-price-update" rel="nofollow">https://help.x.com/en/premium-plus-price-update</a>

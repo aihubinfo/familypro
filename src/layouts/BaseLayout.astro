@@ -58,10 +58,11 @@ const faviconPng96Href = new URL(`${baseUrl}favicon-96x96.png`, canonicalOrigin)
 const appleTouchIconHref = new URL(`${baseUrl}apple-touch-icon.png`, canonicalOrigin).toString();
 const manifestHref = new URL(`${baseUrl}site.webmanifest`, canonicalOrigin).toString();
 const sitemapHref = `${baseUrl}sitemap-index.xml`;
+const isRtl = lang === 'ar';
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} dir={isRtl ? 'rtl' : 'ltr'}>
   <head>
     <SEO
       title={title}
@@ -136,7 +137,7 @@ const sitemapHref = `${baseUrl}sitemap-index.xml`;
 
   body {
     margin: 0;
-    font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-family: "Noto Sans Arabic", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     background: linear-gradient(180deg, #eef5ff 0%, var(--bg) 35%, #eff6ff 100%);
     color: var(--text);
     line-height: 1.75;
@@ -215,6 +216,19 @@ const sitemapHref = `${baseUrl}sitemap-index.xml`;
 
   nav a:hover {
     color: var(--brand);
+  }
+
+  html[dir='rtl'] .nav-wrap {
+    flex-direction: row-reverse;
+  }
+
+  html[dir='rtl'] .lang-wrap {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+  }
+
+  html[dir='rtl'] nav {
+    flex-direction: row-reverse;
   }
 
   .content {

@@ -54,8 +54,18 @@ function resolveLocale(frontmatter, file) {
   return 'en';
 }
 
-function expectedHeading(locale) {
-  return locale.toLowerCase().startsWith('zh') ? '官方参考' : 'References';
+function getAllowedHeadings(locale) {
+  const normalized = locale.toLowerCase();
+  if (normalized.startsWith('zh')) {
+    return ['官方参考'];
+  }
+  if (normalized.startsWith('ja')) {
+    return ['参考文献', '参考資料', 'References'];
+  }
+  if (normalized.startsWith('ar')) {
+    return ['المراجع', 'References'];
+  }
+  return ['References'];
 }
 
 function collectExternalLinks(markdown) {
@@ -92,8 +102,10 @@ function checkFile(file) {
   const text = fs.readFileSync(file, 'utf8');
   const { frontmatter, body } = splitFrontmatter(text);
   const locale = resolveLocale(frontmatter, file);
-  const expected = expectedHeading(locale);
+  const allowedHeadings = getAllowedHeadings(locale);
+  const expected = allowedHeadings[0];
   const expectedHeadingText = `## ${expected}`;
+  const allowedHeadingText = allowedHeadings.map((value) => `## ${value}`).join(' / ');
   const allLinks = uniqueNormalized(collectExternalLinks(body));
   const issues = [];
 
@@ -101,8 +113,14 @@ function checkFile(file) {
     return issues;
   }
 
-  const expectedRegex = new RegExp(`^##\\s+${escapeRegExp(expected)}\\s*$`, 'gm');
-  const headingMatches = Array.from(body.matchAll(expectedRegex));
+  const headingMatches = [];
+  for (const heading of allowedHeadings) {
+    const re = new RegExp(`^##\\s+${escapeRegExp(heading)}\\s*$`, 'gm');
+    for (const match of body.matchAll(re)) {
+      headingMatches.push(match);
+    }
+  }
+  headingMatches.sort((a, b) => (a.index ?? 0) - (b.index ?? 0));
   const genericRegex = /^##\s+([^\n]+)\s*$/gm;
   const allH2 = Array.from(body.matchAll(genericRegex));
 
@@ -110,14 +128,24 @@ function checkFile(file) {
     const likelyReference = allH2
       .map((m) => m[1].trim())
       .find((value) =>
-        ['references', 'sources', 'related links', '官方参考', '参考文档'].includes(value.toLowerCase()),
+        [
+          'references',
+          'sources',
+          'related links',
+          'official references',
+          '官方参考',
+          '参考文档',
+          '参考文献',
+          '参考資料',
+          'المراجع',
+        ].includes(value.toLowerCase()),
       );
 
     issues.push({
       line: 1,
       message: likelyReference
-        ? `uses "## ${likelyReference}" but must use "${expectedHeadingText}"`
-        : `contains reference links but has no "${expectedHeadingText}" section`,
+        ? `uses "## ${likelyReference}" but must use one of: ${allowedHeadingText}`
+        : `contains reference links but has no valid references heading (${allowedHeadingText})`,
     });
     return issues;
   }
@@ -126,7 +154,7 @@ function checkFile(file) {
     const line = lineAt(body, headingMatches[1].index ?? 0);
     issues.push({
       line,
-      message: `contains multiple "${expectedHeadingText}" headings; keep only one final section`,
+      message: `contains multiple reference headings (${allowedHeadingText}); keep only one final section`,
     });
   }
 
@@ -139,7 +167,7 @@ function checkFile(file) {
   if (/^##\s+/m.test(afterSection)) {
     issues.push({
       line: headingLine,
-      message: `"${expectedHeadingText}" is not the final h2 section`,
+      message: `reference heading (${allowedHeadingText}) is not the final h2 section`,
     });
   }
 
@@ -150,14 +178,14 @@ function checkFile(file) {
   if (linksBeforeSection.length > 0 && linksInRelated.length === 0) {
     issues.push({
       line: headingLine,
-      message: `"${expectedHeadingText}" exists but does not list any links`,
+      message: `reference heading (${allowedHeadingText}) exists but does not list any links`,
     });
   }
 
   if (missingLinks.length > 0) {
     issues.push({
       line: headingLine,
-      message: `"${expectedHeadingText}" is missing ${missingLinks.length} referenced link(s): ${missingLinks.join(', ')}`,
+      message: `reference heading (${allowedHeadingText}) is missing ${missingLinks.length} referenced link(s): ${missingLinks.join(', ')}`,
     });
   }
 

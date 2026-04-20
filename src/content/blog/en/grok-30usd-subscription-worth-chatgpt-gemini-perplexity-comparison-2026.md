@@ -7,7 +7,7 @@ description: "SuperGrok vs ChatGPT Plus, Gemini Pro, Perplexity Pro: pricing, mu
 summary: "A single framework to compare four paid tiers and judge whether SuperGrok’s premium is justified for your actual workload."
 category: Grok
 pubDate: 2026-04-10
-updatedDate: 2026-04-10
+updatedDate: 2026-04-20
 author: Huge
 service: General
 tags:
@@ -116,10 +116,10 @@ Practical test: run the **same real tasks** (same repo issue, same video script,
 
 ## References
 
-- FamilyPro — Grok: <a href="https://familypro.io/en/products/grok" rel="nofollow">https://familypro.io/en/products/grok</a>
-- FamilyPro — ChatGPT: <a href="https://familypro.io/en/products/chatgpt" rel="nofollow">https://familypro.io/en/products/chatgpt</a>
-- FamilyPro — Gemini: <a href="https://familypro.io/en/products/gemini" rel="nofollow">https://familypro.io/en/products/gemini</a>
-- FamilyPro — Perplexity: <a href="https://familypro.io/en/products/perplexity" rel="nofollow">https://familypro.io/en/products/perplexity</a>
+- FamilyPro — Grok: <a href="https://familypro.io/en/products/grok?invite=YK868462" rel="nofollow">https://familypro.io/en/products/grok?invite=YK868462</a>
+- FamilyPro — ChatGPT: <a href="https://familypro.io/en/products/chatgpt?invite=YK868462" rel="nofollow">https://familypro.io/en/products/chatgpt?invite=YK868462</a>
+- FamilyPro — Gemini: <a href="https://familypro.io/en/products/gemini?invite=YK868462" rel="nofollow">https://familypro.io/en/products/gemini?invite=YK868462</a>
+- FamilyPro — Perplexity: <a href="https://familypro.io/en/products/perplexity?invite=YK868462" rel="nofollow">https://familypro.io/en/products/perplexity?invite=YK868462</a>
 - SuperGrok / Grok plans: <a href="https://grok.com/plans" rel="nofollow">https://grok.com/plans</a>
 - ChatGPT: <a href="https://openai.com/chatgpt/pricing/" rel="nofollow">https://openai.com/chatgpt/pricing/</a>
 - Gemini (Google AI Pro / Ultra): <a href="https://gemini.google/subscriptions/" rel="nofollow">https://gemini.google/subscriptions/</a>

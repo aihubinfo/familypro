@@ -7,7 +7,7 @@ description: 第三方视角下对比 SuperGrok、ChatGPT Plus、Gemini Pro、Pe
 summary: 四档订阅同一标尺下的横评要点，便于按你的主场景判断 SuperGrok 的溢价是否值得。
 category: Grok
 pubDate: 2026-04-10
-updatedDate: 2026-04-10
+updatedDate: 2026-04-20
 author: Huge
 service: General
 tags:
@@ -116,10 +116,10 @@ draft: false
 
 ## 官方参考
 
-- FamilyPro — Grok：<a href="https://familypro.io/en/products/grok" rel="nofollow">https://familypro.io/en/products/grok</a>
-- FamilyPro — ChatGPT：<a href="https://familypro.io/en/products/chatgpt" rel="nofollow">https://familypro.io/en/products/chatgpt</a>
-- FamilyPro — Gemini：<a href="https://familypro.io/en/products/gemini" rel="nofollow">https://familypro.io/en/products/gemini</a>
-- FamilyPro — Perplexity：<a href="https://familypro.io/en/products/perplexity" rel="nofollow">https://familypro.io/en/products/perplexity</a>
+- FamilyPro — Grok：<a href="https://familypro.io/en/products/grok?invite=YK868462" rel="nofollow">https://familypro.io/en/products/grok?invite=YK868462</a>
+- FamilyPro — ChatGPT：<a href="https://familypro.io/en/products/chatgpt?invite=YK868462" rel="nofollow">https://familypro.io/en/products/chatgpt?invite=YK868462</a>
+- FamilyPro — Gemini：<a href="https://familypro.io/en/products/gemini?invite=YK868462" rel="nofollow">https://familypro.io/en/products/gemini?invite=YK868462</a>
+- FamilyPro — Perplexity：<a href="https://familypro.io/en/products/perplexity?invite=YK868462" rel="nofollow">https://familypro.io/en/products/perplexity?invite=YK868462</a>
 - SuperGrok / Grok 套餐：<a href="https://grok.com/plans" rel="nofollow">https://grok.com/plans</a>
 - ChatGPT：<a href="https://openai.com/chatgpt/pricing/" rel="nofollow">https://openai.com/chatgpt/pricing/</a>
 - Gemini（Google AI Pro / Ultra）：<a href="https://gemini.google/subscriptions/" rel="nofollow">https://gemini.google/subscriptions/</a>

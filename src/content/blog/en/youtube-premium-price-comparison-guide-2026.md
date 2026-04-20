@@ -7,7 +7,7 @@ description: This guide explains YouTube Premium plan types and feature differen
 summary: Start with plan and feature differences, then compare country pricing, and finally choose the best-fit YouTube Premium option for your usage.
 category: YouTube
 pubDate: 2026-04-01
-updatedDate: 2026-04-01
+updatedDate: 2026-04-20
 author: Huge
 service: YouTube Premium
 tags:
@@ -99,4 +99,4 @@ Decide your scenario first (single user, shared family usage, or student eligibi
 ## References
 
 - YouTube Premium official page (final price shown at checkout): [https://www.youtube.com/premium](https://www.youtube.com/premium)
-- FamilyPro YouTube product page: [https://familypro.io/en/products/youtube](https://familypro.io/en/products/youtube)
+- FamilyPro YouTube product page: [https://familypro.io/en/products/youtube?invite=YK868462](https://familypro.io/en/products/youtube?invite=YK868462)

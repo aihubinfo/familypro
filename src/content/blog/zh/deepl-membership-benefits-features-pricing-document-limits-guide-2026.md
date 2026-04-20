@@ -7,7 +7,7 @@ description: 这篇文章聚焦 DeepL 会员权益差异和价格对比，重点
 summary: 一次讲清 DeepL 会员差异、文件翻译限制、价格模型和 API 工具路线。
 category: DeepL
 pubDate: 2026-04-08
-updatedDate: 2026-04-08
+updatedDate: 2026-04-20
 author: Huge
 service: General
 tags:
@@ -170,8 +170,8 @@ API Free 有每月 500,000 字符上限，API Pro 无总量硬上限（但按用
 
 ## 官方参考
 
-- FamilyPro DeepL 翻译工具页: [https://familypro.io/en/deepl-translate](https://familypro.io/en/deepl-translate)
-- FamilyPro DeepL 产品页: [https://familypro.io/en/products/deepl](https://familypro.io/en/products/deepl)
+- FamilyPro DeepL 翻译工具页: [https://familypro.io/en/deepl-translate?invite=YK868462](https://familypro.io/en/deepl-translate?invite=YK868462)
+- FamilyPro DeepL 产品页: [https://familypro.io/en/products/deepl?invite=YK868462](https://familypro.io/en/products/deepl?invite=YK868462)
 - About DeepL plans（官方）: [https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans](https://support.deepl.com/hc/en-us/articles/360019924499-About-DeepL-plans)
 - DeepL Pro license terms（官方）: [https://www.deepl.com/en/pro-license](https://www.deepl.com/en/pro-license)
 - About file translation（官方）: [https://support.deepl.com/hc/en-us/articles/360020582499-About-file-translation](https://support.deepl.com/hc/en-us/articles/360020582499-About-file-translation)

@@ -7,7 +7,7 @@ description: "Gamma tiers: monthly credits, in-app vs API deductions, deck estim
 summary: "Start with monthly credits and feature limits, then estimate usage using in-app rates or API responses. The end sections spell out who shared accounts and per-use API wrappers suit—and when to buy which tier."
 category: AI Tools
 pubDate: 2026-04-02
-updatedDate: 2026-04-02
+updatedDate: 2026-04-20
 author: Huge
 service: General
 tags:
@@ -146,8 +146,8 @@ Help Center stresses **credits are per user**, not one shared pool for the whole
 
 ## References
 
-- [FamilyPro: Gamma product page](https://familypro.io/en/products/gamma)
-- [FamilyPro: Gamma AI](https://familypro.io/en/gamma-ai)
+- [FamilyPro: Gamma product page](https://familypro.io/en/products/gamma?invite=YK868462)
+- [FamilyPro: Gamma AI](https://familypro.io/en/gamma-ai?invite=YK868462)
 - [Gamma Pricing](https://gamma.app/pricing)
 - [How do credits work in Gamma?](https://help.gamma.app/en/articles/7834324-how-do-credits-work-in-gamma)
 - [Upgrading your Gamma subscription](https://help.gamma.app/en/articles/8077107-upgrading-to-gamma-plus-or-pro-a-quick-guide)
