@@ -7,7 +7,7 @@ description: دليل عملي يشرح صياغة Prompt في Grok Imagine عب
 summary: من هيكل الـPrompt إلى خطوات التحسين ثم 50+ مثالًا عمليًا، لتحويل نتائج Grok Imagine من عشوائية إلى نتائج قابلة للتكرار.
 category: Grok
 pubDate: 2026-04-20
-updatedDate: 2026-04-20
+updatedDate: 2026-04-21
 author: Huge
 service: عام
 tags:
@@ -177,3 +177,4 @@ draft: false
 - FamilyPro - Grok Imagine: <a href="https://familypro.io/en/grok-imagine?invite=YK868462" rel="nofollow">https://familypro.io/en/grok-imagine?invite=YK868462</a>
 - Grok official plans page: <a href="https://grok.com/plans" rel="nofollow">https://grok.com/plans</a>
 - xAI official documentation: <a href="https://docs.x.ai" rel="nofollow">https://docs.x.ai</a>
+- FamilyPro - Grok product page: <a href="https://familypro.io/en/products/grok?invite=YK868462" rel="nofollow">https://familypro.io/en/products/grok?invite=YK868462</a>
