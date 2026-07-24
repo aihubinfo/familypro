@@ -18,6 +18,7 @@ Use this reference when creating a new post, rewriting an existing one, expandin
    - `updatedDate`: every blog edit must sync `updatedDate` to today's date (`YYYY-MM-DD`)
    - If the post includes explicit freshness dates (`as of`, `last checked on`, `截至`, `最后核对日期`), sync those markers to the current verification date in every edited language file.
    - Keep `title`/`headline` semantically aligned with the same core keyword so the search promise and page promise match.
+   - For every new public post, invoke `familypro-blog-cover-workflow` unless the user explicitly requests a text-only article. Generate one English-captioned cover per `translationKey`, store it under `public/blog-covers/`, and reuse the same `coverImage` value in all language variants.
 4. Outline before drafting.
    - Decide the article argument/order first.
    - Aim for a clear `h1 -> h2 -> h3` shape, but only add `h3` where true substructure exists.

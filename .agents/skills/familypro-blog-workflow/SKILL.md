@@ -31,6 +31,7 @@ Read `src/pages/[lang]/blog/[slug].astro` only when the task involves `title`, `
 - For review-only work: read [review.md](references/review.md)
 - For frontmatter, title, headline, or SEO-specific adjustments: read [seo_frontmatter.md](references/seo_frontmatter.md)
 - For language fluency/clarity polishing (smooth phrasing, ambiguity reduction): read [language-clarity.md](references/language-clarity.md)
+- For a new public post, a missing blog cover, a cover replacement, or new language variants sharing a cover: invoke the sibling `familypro-blog-cover-workflow` skill.
 
 You may need more than one reference file, but only load the ones relevant to the current task.
 

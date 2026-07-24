@@ -1,0 +1,4 @@
+interface:
+  display_name: "Familypro Blog Cover Workflow"
+  short_description: "Generate and attach multilingual Familypro blog covers"
+  default_prompt: "Use $familypro-blog-cover-workflow to generate and attach one shared cover image for a multilingual Familypro blog post."
