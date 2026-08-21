@@ -6,8 +6,9 @@ headline: 共有アカウントは安いが不安定：ChatGPT と Grok の実�
 description: ChatGPT と Grok の共有アカウントで起きやすい問題を、プライバシー、上限制限、風控（セキュリティ判定）、接続安定性、サポート品質、履歴継承の観点で解説します。
 summary: 共有アカウントは「軽く試す用途」には向く一方、仕事で継続利用するにはリスクが大きい。失敗しない判断基準を提示します。
 category: AI工具
+coverImage: /blog-covers/shared-account-risks-chatgpt-plus-supergrok-quota-guide-2026.webp
 pubDate: 2026-04-21
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

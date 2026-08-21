@@ -6,8 +6,9 @@ headline: ChatGPT Images 2.0 は何が進化したのか：文字精度・ポス
 description: ChatGPT Images 2.0 / gpt-image-2 は OpenAI の最新画像モデルです。文字描画、多言語レイアウト、複雑指示の追従、画像編集に注目し、Nano Banana、Nano Banana Pro、Nano Banana 2、Midjourney、Runway と実運用視点で比較します。
 summary: ChatGPT Images 2.0 の実利用を軸に、能力の境界、コスト戦略、各モデルとの使い分けを網羅的に整理します。
 category: AI工具
+coverImage: /blog-covers/chatgpt-images-2-gpt-image-2-review-vs-nano-banana-2026.webp
 pubDate: 2026-04-24
-updatedDate: 2026-04-24
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

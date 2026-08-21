@@ -6,8 +6,9 @@ headline: Grok Plan Types, Grok Imagine Differences, and Buying Advice
 description: This guide compares Free Grok, SuperGrok, and SuperGrok Heavy, explains key feature differences including Grok Imagine limits, and provides pricing-based buying advice.
 summary: From Free Grok to SuperGrok Heavy, this article explains plan differences, official pricing, and whether upgrading is worth it.
 category: Grok
+coverImage: /blog-covers/grok-plan-types-features-imagine-price-comparison-2026.webp
 pubDate: 2026-04-01
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

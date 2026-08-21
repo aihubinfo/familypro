@@ -6,8 +6,9 @@ headline: اختر نموذج NanoBanana المناسب أولًا، ثم است
 description: مقارنة عملية بين nanobanana وnanobananapro وnanobanana2، ثم منهج كتابة Prompt قابل للتنفيذ مع أكثر من 50 قالبًا مصنفًا حسب سيناريو الاستخدام.
 summary: من اختيار النموذج إلى هيكل الـPrompt ثم 50+ مثالًا جاهزًا، هذا الدليل يحوّل توليد الصور من العشوائية إلى نتائج قابلة للتكرار.
 category: أدوات الذكاء الاصطناعي
+coverImage: /blog-covers/nanobanana-image-prompt-guide-model-comparison-50-examples-2026.webp
 pubDate: 2026-04-20
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: عام
 tags:

@@ -6,8 +6,9 @@ headline: Grokプラン差とGrok Imagine利用観点の選び方
 description: Free Grok、SuperGrok、SuperGrok Heavyを、安定性・上限・Imagine利用・価格の観点で比較し、用途別に選び方を解説します。
 summary: Grokの無料/有料プランを同じ軸で比較し、アップグレードが必要か判断する実践ガイド。
 category: Grok
+coverImage: /blog-covers/grok-plan-types-features-imagine-price-comparison-2026.webp
 pubDate: 2026-04-01
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

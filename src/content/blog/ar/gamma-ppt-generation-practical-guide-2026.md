@@ -6,8 +6,9 @@ headline: خطوات عملية للحصول على عرض قابل للتقدي
 description: دليل عملي لاستخدام Gamma عبر مسارات Generate/Paste/Import أو Templates/Remix، مع طريقة ضبط الجمهور والنبرة وعدد الشرائح واستراتيجية الصور.
 summary: ثبّت متطلبات العرض أولًا، ثم اختر مدخل الإنشاء المناسب لتحسين جودة المخرجات وتقليل التعديلات.
 category: AI工具
+coverImage: /blog-covers/gamma-ppt-generation-practical-guide-2026.webp
 pubDate: 2026-04-02
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: عام
 tags:

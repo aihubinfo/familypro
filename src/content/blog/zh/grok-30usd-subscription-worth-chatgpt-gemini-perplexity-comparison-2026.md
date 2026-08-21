@@ -6,8 +6,9 @@ headline: 价格、多模态与编程：SuperGrok 与 ChatGPT Plus、Gemini Pro�
 description: 第三方视角下对比 SuperGrok、ChatGPT Plus、Gemini Pro、Perplexity Pro 在价格、对话、图像、视频与编程上的差异、额度与典型取舍；标价以美国区官网常见口径为准并标注日期，地区与账号策略需以结算页为准单独核对。
 summary: 四档订阅同一标尺下的横评要点，便于按你的主场景判断 SuperGrok 的溢价是否值得。
 category: Grok
+coverImage: /blog-covers/grok-30usd-subscription-worth-chatgpt-gemini-perplexity-comparison-2026.webp
 pubDate: 2026-04-10
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:
@@ -125,4 +126,3 @@ draft: false
 - Gemini（Google AI Pro / Ultra）：<a href="https://gemini.google/subscriptions/" rel="nofollow">https://gemini.google/subscriptions/</a>
 - Perplexity Pro：<a href="https://www.perplexity.ai/pricing" rel="nofollow">https://www.perplexity.ai/pricing</a>
 - xAI API（与订阅计费分离，开发者参考）：<a href="https://docs.x.ai/docs/models" rel="nofollow">https://docs.x.ai/docs/models</a>
-

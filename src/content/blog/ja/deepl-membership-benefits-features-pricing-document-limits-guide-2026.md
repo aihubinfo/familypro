@@ -6,8 +6,9 @@ headline: DeepLプラン差分を実務目線で整理（容量制限・料金�
 description: DeepL有料プランの違いを、ファイル翻訳の上限、料金構造、チーム運用、API従量課金の観点で比較し、購入判断しやすい形で整理します。
 summary: DeepLのプラン差・ファイル翻訳上限・API代替ルートを同じ基準で比較できる実務ガイド。
 category: DeepL
+coverImage: /blog-covers/deepl-membership-benefits-features-pricing-document-limits-guide-2026.webp
 pubDate: 2026-04-08
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

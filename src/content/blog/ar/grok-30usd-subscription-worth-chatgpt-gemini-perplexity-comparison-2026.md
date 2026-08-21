@@ -6,8 +6,9 @@ headline: مقارنة عملية بين 4 اشتراكات مدفوعة من ز
 description: مراجعة مقارنة بين SuperGrok وChatGPT Plus وGemini Pro وPerplexity Pro عبر السعر، القدرات المتعددة الوسائط، دعم البرمجة، والاستقرار تحت الضغط.
 summary: إطار موحد يساعدك على تقييم هل فارق سعر SuperGrok مبرر وفق عبء عملك الفعلي.
 category: Grok
+coverImage: /blog-covers/grok-30usd-subscription-worth-chatgpt-gemini-perplexity-comparison-2026.webp
 pubDate: 2026-04-10
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: عام
 tags:

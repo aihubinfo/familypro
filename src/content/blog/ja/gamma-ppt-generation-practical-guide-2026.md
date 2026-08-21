@@ -6,8 +6,9 @@ headline: Gammaで「最初の1回目」から外さないための作成手順
 description: Gammaで資料を作る際に、Generate/Paste/Importとテンプレート/Remixの使い分け、対象読者・トーン・枚数・画像戦略の設定方法を実務向けに解説します。
 summary: 先に要件を固定し、適切な入口を選ぶことでGammaの初回生成精度を上げるガイド。
 category: AI工具
+coverImage: /blog-covers/gamma-ppt-generation-practical-guide-2026.webp
 pubDate: 2026-04-02
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

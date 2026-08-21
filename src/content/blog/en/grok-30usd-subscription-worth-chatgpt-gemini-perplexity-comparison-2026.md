@@ -6,8 +6,9 @@ headline: "Pricing, multimodal, and coding: SuperGrok vs ChatGPT Plus, Gemini Pr
 description: "SuperGrok vs ChatGPT Plus, Gemini Pro, Perplexity Pro: pricing, multimodal features, coding (Codex). Capability gaps and quotas; US list pricing as reference."
 summary: "A single framework to compare four paid tiers and judge whether SuperGrok’s premium is justified for your actual workload."
 category: Grok
+coverImage: /blog-covers/grok-30usd-subscription-worth-chatgpt-gemini-perplexity-comparison-2026.webp
 pubDate: 2026-04-10
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:
@@ -125,4 +126,3 @@ Practical test: run the **same real tasks** (same repo issue, same video script,
 - Gemini (Google AI Pro / Ultra): <a href="https://gemini.google/subscriptions/" rel="nofollow">https://gemini.google/subscriptions/</a>
 - Perplexity Pro: <a href="https://www.perplexity.ai/pricing" rel="nofollow">https://www.perplexity.ai/pricing</a>
 - xAI API (separate from subscription billing): <a href="https://docs.x.ai/docs/models" rel="nofollow">https://docs.x.ai/docs/models</a>
-

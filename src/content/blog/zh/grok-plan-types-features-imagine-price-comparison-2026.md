@@ -6,8 +6,9 @@ headline: Grok 套餐类型、Grok Imagine 差异与购买建议
 description: 这篇文章基于 Free Grok、SuperGrok、SuperGrok Heavy 三档，梳理功能差异与 Grok Imagine 体验区别，并按官方价格口径给出对比和购买建议。
 summary: 从 Free Grok 到 SuperGrok Heavy，本文一次讲清套餐差异、官方价格和是否值得买。
 category: Grok
+coverImage: /blog-covers/grok-plan-types-features-imagine-price-comparison-2026.webp
 pubDate: 2026-04-01
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

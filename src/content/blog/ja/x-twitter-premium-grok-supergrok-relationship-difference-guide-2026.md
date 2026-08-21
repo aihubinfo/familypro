@@ -6,8 +6,9 @@ headline: Xの会員とGrok会員は同じではない：権利の境界と選�
 description: X Basic/Premium/Premium+でのGrok提供の違いを整理し、grok.comのSuperGrokとの違いを比較。課金主体、利用上限、誤解しやすい命名を分かりやすく解説します。
 summary: X課金とGrok課金は別ライン。何を買うべきかを用途別に判断できる比較ガイドです。
 category: Grok
+coverImage: /blog-covers/x-twitter-premium-grok-supergrok-relationship-difference-guide-2026.webp
 pubDate: 2026-04-10
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

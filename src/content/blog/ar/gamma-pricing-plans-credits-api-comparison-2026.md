@@ -6,8 +6,9 @@ headline: قراءة تكلفة Gamma بطريقة صحيحة عبر الاعت�
 description: مقارنة خطط Gamma من زاوية الاعتمادات الشهرية، الاستهلاك داخل التطبيق، استخدام API، وشراء الاعتمادات الإضافية لاتخاذ قرار شراء أدق.
 summary: لا تكتفِ بسعر الاشتراك؛ قارن بناءً على منحنى استهلاك الاعتمادات والتكلفة الفعلية لكل عرض.
 category: AI工具
+coverImage: /blog-covers/gamma-pricing-plans-credits-api-comparison-2026.webp
 pubDate: 2026-04-02
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: عام
 tags:

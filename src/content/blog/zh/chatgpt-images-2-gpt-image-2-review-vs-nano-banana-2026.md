@@ -6,8 +6,9 @@ headline: ChatGPT Images 2.0 深度体验：文字更清晰，海报更可用，
 description: ChatGPT Images 2.0 / gpt-image-2 是 OpenAI 最新图像生成模型，重点提升文字渲染、多语言排版、复杂指令遵循和图像编辑能力。本文结合真实使用体验，分析它与 Nano Banana、Nano Banana Pro、Nano Banana 2、Midjourney 和 Runway 的区别。
 summary: 围绕真实使用体验，完整拆解 ChatGPT Images 2.0 的能力边界、成本策略，以及与 Nano Banana 系列、Midjourney、Runway 的适配差异。
 category: AI工具
+coverImage: /blog-covers/chatgpt-images-2-gpt-image-2-review-vs-nano-banana-2026.webp
 pubDate: 2026-04-24
-updatedDate: 2026-04-24
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

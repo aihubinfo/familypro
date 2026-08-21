@@ -30,11 +30,14 @@
 - `article-header` and `article-main` widths are aligned.
 - Card borders/radius/padding are consistent with site tokens.
 - Sidebar width and gap are stable at desktop breakpoints.
+- Article covers use a 16:9 box with `object-fit: contain`; no title or artwork is cropped on home, list, or detail pages.
+- Blog grids progress from 1 to 2 to 3 to at most 4 columns as viewport width grows.
 
 ## 6) Regression Sweep
 
 - Home page renders without layout shift.
 - Blog list page renders without card wrapping regressions.
+- Long localized titles do not widen grid tracks or create horizontal scrolling.
 - One article page per non-default locale still renders correctly.
 
 ## 7) Validation Commands

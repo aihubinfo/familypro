@@ -6,8 +6,9 @@ headline: X（推特）订阅与 Grok 会员不是一回事：权益边界与购
 description: 厘清 X Basic / Premium / Premium+ 下 Grok 权益差异（定性口径），并与 grok.com 的 SuperGrok 订阅对标；说明产品归属、计费线与「同名 SuperGrok」易混点；价格以美国区官网常见口径为参考，下单以结算页为准。
 summary: 讲清 X 各档附带 Grok 与独立 SuperGrok 不是一张发票、也不是同一套额度；附决策要点，避免买错会员。
 category: Grok
+coverImage: /blog-covers/x-twitter-premium-grok-supergrok-relationship-difference-guide-2026.webp
 pubDate: 2026-04-10
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

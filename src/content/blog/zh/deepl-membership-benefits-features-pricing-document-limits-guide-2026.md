@@ -6,8 +6,9 @@ headline: DeepL 各会员的文件翻译额度、价格逻辑与 API 按量方�
 description: 这篇文章聚焦 DeepL 会员权益差异和价格对比，重点解释不同会员的文件翻译数量/额度限制，并对比基于 DeepL API 的按量收费工具方案，提供可执行的购买决策框架。
 summary: 一次讲清 DeepL 会员差异、文件翻译限制、价格模型和 API 工具路线。
 category: DeepL
+coverImage: /blog-covers/deepl-membership-benefits-features-pricing-document-limits-guide-2026.webp
 pubDate: 2026-04-08
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

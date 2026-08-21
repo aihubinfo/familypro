@@ -6,8 +6,9 @@ headline: "فهم فروق خطط DeepL عمليًا: السقوف، التكل�
 description: مقارنة عملية بين خطط DeepL مع التركيز على حدود ترجمة الملفات، منطق التسعير، توزيع الاستخدام داخل الفرق، ومتى يكون الدفع حسب الاستخدام عبر API أكثر كفاءة.
 summary: دليل شراء عملي يوضح كيف تختار خطة DeepL المناسبة حسب حجم الترجمة وحدود الملفات ونمط التشغيل.
 category: DeepL
+coverImage: /blog-covers/deepl-membership-benefits-features-pricing-document-limits-guide-2026.webp
 pubDate: 2026-04-08
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: عام
 tags:

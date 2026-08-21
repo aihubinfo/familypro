@@ -6,8 +6,9 @@ headline: "اشتراك X ليس هو اشتراك Grok: حدود المزايا
 description: توضيح الفروق بين Basic وPremium وPremium+ في X من جهة، واشتراك SuperGrok في grok.com من جهة أخرى، مع شرح جهة الفوترة وحدود الاستخدام وأخطاء المقارنة الشائعة.
 summary: دليل عملي لفهم الفرق بين اشتراك المنصة (X) واشتراك المنتج (Grok) حتى لا تدفع في المسار الخطأ.
 category: Grok
+coverImage: /blog-covers/x-twitter-premium-grok-supergrok-relationship-difference-guide-2026.webp
 pubDate: 2026-04-10
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: عام
 tags:

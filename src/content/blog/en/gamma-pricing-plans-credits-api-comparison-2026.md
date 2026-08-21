@@ -6,8 +6,9 @@ headline: "Gamma tiers, monthly credits, and how to estimate cost per deck"
 description: "Gamma tiers: monthly credits, in-app vs API deductions, deck estimates, shared logins and API wrappers, buying tips—Help Center and developer docs."
 summary: "Start with monthly credits and feature limits, then estimate usage using in-app rates or API responses. The end sections spell out who shared accounts and per-use API wrappers suit—and when to buy which tier."
 category: AI Tools
+coverImage: /blog-covers/gamma-pricing-plans-credits-api-comparison-2026.webp
 pubDate: 2026-04-02
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

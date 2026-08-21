@@ -6,8 +6,9 @@ headline: YouTube Premium 套餐介绍与主流国家价格对比
 description: 这篇文章先介绍 YouTube Premium 的个人、家庭与学生套餐及功能差异，再对比主流国家价格，并给出不同人群的购买建议。
 summary: 先看套餐差异，再看价格对比，最后按你的使用场景选择更合适的 YouTube Premium 方案。
 category: YouTube
+coverImage: /blog-covers/youtube-premium-price-comparison-guide-2026.webp
 pubDate: 2026-04-01
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: YouTube Premium
 tags:

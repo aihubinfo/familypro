@@ -6,8 +6,9 @@ headline: "ChatGPT Images 2.0 بوضوح أكبر للنصوص وقابلية أ
 description: "ChatGPT Images 2.0 / gpt-image-2 هو أحدث نموذج صور من OpenAI مع تحسينات في رسم النصوص، التنسيق متعدد اللغات، اتباع التعليمات المعقدة، وتحرير الصور. هذه المراجعة العملية تقارنه مع Nano Banana وNano Banana Pro وNano Banana 2 وMidjourney وRunway."
 summary: "تفصيل عملي شامل لقدرات ChatGPT Images 2.0 وحدوده واستراتيجية التكلفة، مع مقارنة سيناريوهات الاستخدام مقابل سلسلة Nano Banana وMidjourney وRunway."
 category: أدوات الذكاء الاصطناعي
+coverImage: /blog-covers/chatgpt-images-2-gpt-image-2-review-vs-nano-banana-2026.webp
 pubDate: 2026-04-24
-updatedDate: 2026-04-24
+updatedDate: 2026-08-21
 author: Huge
 service: عام
 tags:

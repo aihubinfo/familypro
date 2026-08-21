@@ -6,8 +6,9 @@ headline: فهم فروق خطط Grok وتأثيرها العملي على اس�
 description: مقارنة واضحة بين Free Grok وSuperGrok وSuperGrok Heavy من حيث الاستقرار، السقوف، تجربة Grok Imagine، والتكلفة الفعلية.
 summary: دليل سريع يساعدك على تحديد متى يكفي المجاني ومتى يكون الترقية إلى SuperGrok أو Heavy مبررة.
 category: Grok
+coverImage: /blog-covers/grok-plan-types-features-imagine-price-comparison-2026.webp
 pubDate: 2026-04-01
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: عام
 tags:

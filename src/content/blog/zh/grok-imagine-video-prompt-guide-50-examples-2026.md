@@ -6,8 +6,9 @@ headline: 想让 Grok Imagine 稳定出片？先学会这套视频提示词结�
 description: 这篇指南系统讲清 Grok Imagine 视频提示词的写法，包含镜头、主体、动作、风格、时长、运镜与负面约束，并给出50多个按场景分类的中文模板，帮助你快速生成更接近目标的视频结果。
 summary: 从提示词结构到迭代方法，再到50+分类模板，帮你把 Grok Imagine 的“随机出片”变成“可控出片”。
 category: Grok
+coverImage: /blog-covers/grok-imagine-video-prompt-guide-50-examples-2026.webp
 pubDate: 2026-04-20
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

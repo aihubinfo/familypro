@@ -6,8 +6,9 @@ headline: منهج عملي لكتابة Prompts في Grok Imagine للوصول 
 description: دليل عملي يشرح صياغة Prompt في Grok Imagine عبر تحديد الموضوع والحركة والكاميرا والأسلوب والإضاءة والقيود السلبية، مع أكثر من 50 قالبًا مصنفًا يمكن إعادة استخدامه.
 summary: من هيكل الـPrompt إلى خطوات التحسين ثم 50+ مثالًا عمليًا، لتحويل نتائج Grok Imagine من عشوائية إلى نتائج قابلة للتكرار.
 category: Grok
+coverImage: /blog-covers/grok-imagine-video-prompt-guide-50-examples-2026.webp
 pubDate: 2026-04-20
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: عام
 tags:

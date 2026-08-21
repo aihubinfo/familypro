@@ -6,8 +6,9 @@ headline: NanoBananaシリーズの選び方と、狙い通りに寄せるプロ
 description: nanobanana・nanobananapro・nanobanana2の違いを整理し、画像生成で再現性を高めるプロンプト設計と50以上のカテゴリ別テンプレートを解説します。
 summary: モデル選定、プロンプト構造、50+実例を通じて、NanoBananaの出力を「偶然」から「再現可能」に変えるガイドです。
 category: AI工具
+coverImage: /blog-covers/nanobanana-image-prompt-guide-model-comparison-50-examples-2026.webp
 pubDate: 2026-04-20
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

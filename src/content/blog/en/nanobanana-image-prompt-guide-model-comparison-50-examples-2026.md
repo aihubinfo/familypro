@@ -6,8 +6,9 @@ headline: Choose the Right NanoBanana Model First, Then Use This Prompt Framewor
 description: This guide compares nanobanana, nanobananapro, and nanobanana2, then provides a practical image prompt structure and 50+ categorized templates to turn random outputs into controllable results.
 summary: From model selection to prompt structure to 50+ categorized examples, this article shows how to get NanoBanana image generation closer to your target output.
 category: AI工具
+coverImage: /blog-covers/nanobanana-image-prompt-guide-model-comparison-50-examples-2026.webp
 pubDate: 2026-04-20
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

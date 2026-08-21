@@ -6,8 +6,9 @@ headline: Grok Imagineで狙い通りの動画を出すためのプロンプト�
 description: Grok Imagineで動画生成の精度を上げるために、主題・動作・カメラ・スタイル・尺・ネガティブ制約をどう書くかを解説し、すぐ使える50以上のカテゴリ別テンプレートを紹介します。
 summary: プロンプト構造、反復改善フロー、50+の実用テンプレートで、Grok Imagineの出力を「運任せ」から「再現可能」に変えるガイドです。
 category: Grok
+coverImage: /blog-covers/grok-imagine-video-prompt-guide-50-examples-2026.webp
 pubDate: 2026-04-20
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

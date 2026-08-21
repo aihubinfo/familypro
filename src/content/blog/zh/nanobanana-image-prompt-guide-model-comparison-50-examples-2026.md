@@ -6,8 +6,9 @@ headline: 先选对 NanoBanana 系列模型，再用这套提示词结构稳定�
 description: 本文先对比 nanobanana、nanobananapro、nanobanana2 的定位差异，再给出可执行的生图提示词写法和50多个按场景分类模板，帮助你把“随机出图”变成“可控出图”。
 summary: 从模型选择到提示词结构，再到50+分类模板，系统讲清如何让 NanoBanana 生图更接近预期。
 category: AI工具
+coverImage: /blog-covers/nanobanana-image-prompt-guide-model-comparison-50-examples-2026.webp
 pubDate: 2026-04-20
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

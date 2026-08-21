@@ -6,8 +6,9 @@ headline: Gammaの月次クレジットと実質コストをどう読むか
 description: GammaのPlus/Pro/Ultraの差分を、月次クレジット、アプリ内消費、API利用、追加購入の観点で整理し、最適プラン選定の実務手順を示します。
 summary: Gammaの料金比較を「クレジット消費」と「実際の利用量」で判断するための実践ガイド。
 category: AI工具
+coverImage: /blog-covers/gamma-pricing-plans-credits-api-comparison-2026.webp
 pubDate: 2026-04-02
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

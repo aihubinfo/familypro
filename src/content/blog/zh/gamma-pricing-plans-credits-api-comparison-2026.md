@@ -6,8 +6,9 @@ headline: Gamma 会员档位、每月积分、单次演示消耗怎么算
 description: 据 Gamma 帮助中心与开发者文档，汇总各档每月积分与功能差异，区分应用内扣费与 API 扣费，并给出单次演示估算、共享账号与 API 按次类工具的适用人群及档位购买建议。
 summary: 先看每月积分与功能边界，再按「界面内固定费率」或「API 返回扣费」估算消耗；文末区分「共享账号」「API/按次工具」各自更适合谁，并给出档位购买建议。
 category: AI工具
+coverImage: /blog-covers/gamma-pricing-plans-credits-api-comparison-2026.webp
 pubDate: 2026-04-02
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

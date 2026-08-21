@@ -6,8 +6,9 @@ headline: "Practical steps to turn content into a presentable, exportable deck i
 description: "Gamma guide: define your brief, then create from text (Generate/Paste/Import) or templates/Remix. Covers audience, tone, cards, images, and PPTX export."
 summary: "Start with a clear brief, then pick the right entry point. Use the parameter tables below for audience, tone, card count, and image strategy so the first generation lands closer to what you expect."
 category: AI Tools
+coverImage: /blog-covers/gamma-ppt-generation-practical-guide-2026.webp
 pubDate: 2026-04-02
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

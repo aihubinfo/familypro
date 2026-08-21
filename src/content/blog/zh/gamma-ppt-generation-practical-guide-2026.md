@@ -6,8 +6,9 @@ headline: 用 Gamma 把内容做成可演示、可导出 PPT 的实操步骤
 description: 从「期望约束」到两条创建路径（文本新建 / 模板 Remix），并说明与官方生成逻辑一致的可配置项：听众、语气、篇幅、语言、分卡、版式比例、主题与图片来源等，附中文填写示例与导出验收。
 summary: 先写清期望，再选对入口；创建阶段可对照下文参数表填写「听众、语气、页数、配图策略」等，减少生成后与预期不符的返工。
 category: AI工具
+coverImage: /blog-covers/gamma-ppt-generation-practical-guide-2026.webp
 pubDate: 2026-04-02
-updatedDate: 2026-04-20
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:

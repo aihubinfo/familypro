@@ -23,6 +23,7 @@ interface Props {
   modifiedTime?: string;
   tags?: string[];
   jsonLd?: Record<string, unknown>;
+  contentWidth?: 'default' | 'wide';
 }
 
 const {
@@ -46,6 +47,7 @@ const {
   modifiedTime,
   tags = [],
   jsonLd,
+  contentWidth = 'default',
 } = Astro.props;
 
 const rawBaseUrl = import.meta.env.BASE_URL;
@@ -108,7 +110,7 @@ const isRtl = lang === 'ar';
       </div>
     </header>
 
-    <main class="container content">
+    <main class:list={['container', 'content', { 'content-wide': contentWidth === 'wide' }]}>
       <slot />
     </main>
 
@@ -233,6 +235,11 @@ const isRtl = lang === 'ar';
 
   .content {
     padding: 2.2rem 0 3rem;
+  }
+
+  .content-wide {
+    --container-max: 1440px;
+    --container-vw: 94vw;
   }
 
   .site-footer {

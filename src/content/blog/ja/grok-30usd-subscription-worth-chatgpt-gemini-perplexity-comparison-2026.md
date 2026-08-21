@@ -6,8 +6,9 @@ headline: 価格・マルチモーダル・コーディング観点で見る4サ
 description: SuperGrok、ChatGPT Plus、Gemini Pro、Perplexity Proを、価格、機能、実務利用、上限観点で比較し、どの課金が自分の用途に合うかを整理します。
 summary: 4つの有料プランを同じ物差しで比べ、SuperGrokのプレミアムが妥当かを判断するガイド。
 category: Grok
+coverImage: /blog-covers/grok-30usd-subscription-worth-chatgpt-gemini-perplexity-comparison-2026.webp
 pubDate: 2026-04-10
-updatedDate: 2026-04-21
+updatedDate: 2026-08-21
 author: Huge
 service: General
 tags:
