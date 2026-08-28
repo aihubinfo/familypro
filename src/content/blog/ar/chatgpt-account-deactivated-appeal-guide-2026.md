@@ -8,7 +8,7 @@ summary: "حدّد أولًا ما إذا كان الحساب معطّلًا ف�
 category: أدوات الذكاء الاصطناعي
 coverImage: /blog-covers/chatgpt-account-deactivated-appeal-guide-2026.webp
 pubDate: 2026-08-21
-updatedDate: 2026-08-21
+updatedDate: 2026-08-28
 author: Huge
 service: عام
 tags:
@@ -22,7 +22,7 @@ draft: false
 
 عندما يسجّل ChatGPT خروجك فجأة ويظهر أن الحساب حُذف أو عُطّل، فأسوأ بداية هي إرسال الشكوى نفسها في كل مكان أو نسخ صيغة من الإنترنت تدّعي أنها «تضمن فك الحظر». الخطوة الصحيحة هي تحديد الحالة أولًا: **تعطيل فعلي للحساب، أو عدم اكتمال التحقق من الهوية أو العمر، أو تعليق وقائي بسبب اشتباه في اختراق، أو مشكلة عادية في تسجيل الدخول**.
 
-تمت مراجعة هذا الدليل في **21 أغسطس 2026** بالاستناد إلى مركز مساعدة OpenAI، وشروط الاستخدام، وإرشادات أمان الحساب، وتجارب عامة نشرها مستخدمون. لا تنشر OpenAI نسبة نجاح للاعتراضات ولا تضمن مدة ثابتة للرد. لذلك لا تضمن الخطوات التالية استعادة الحساب، لكنها تساعدك على استخدام القناة الصحيحة وتقديم هوية الحساب والتسلسل الزمني والأدلة بشكل يمكن مراجعته.
+تمت مراجعة هذا الدليل في **28 أغسطس 2026** بالاستناد إلى مركز مساعدة OpenAI، وشروط الاستخدام، وإرشادات أمان الحساب، وتجارب عامة نشرها مستخدمون. لا تنشر OpenAI نسبة نجاح للاعتراضات ولا تضمن مدة ثابتة للرد. لذلك لا تضمن الخطوات التالية استعادة الحساب، لكنها تساعدك على استخدام القناة الصحيحة وتقديم هوية الحساب والتسلسل الزمني والأدلة بشكل يمكن مراجعته.
 
 ## تأكد أولًا: تعذر الدخول لا يعني دائمًا أن الحساب محظور
 
@@ -59,7 +59,7 @@ draft: false
 - استخدام الخدمة بطريقة قد تضر بالآخرين أو بسلامة الخدمة؛
 - تقديم بيانات تسجيل أو فوترة غير دقيقة، أو تقييد الوصول بعد فشل الدفع.
 
-مشاركة بيانات الدخول مع أقارب أو زملاء لا تجعل المشاركة مسموحة تلقائيًا. تنص شروط OpenAI للمستهلكين على عدم مشاركة بيانات الحساب أو إتاحة الحساب لشخص آخر. وقبل شراء وصول مشترك، راجع <a href="../shared-account-risks-chatgpt-plus-supergrok-quota-guide-2026/">مخاطر حسابات ChatGPT المشتركة</a>.
+مشاركة بيانات الدخول مع أقارب أو زملاء لا تجعل المشاركة مسموحة. توضح شروط OpenAI للمستهلكين و<a href="https://help.openai.com/en/articles/10471989-openai-account-sharing-policy" rel="nofollow">سياسة مشاركة الحساب</a> أن الحساب الفردي مخصص لمن أنشأه، وأن على أي مستخدم آخر إنشاء حسابه الخاص. وقبل شراء وصول مشترك، راجع <a href="../shared-account-risks-chatgpt-plus-supergrok-quota-guide-2026/">مخاطر حسابات ChatGPT المشتركة</a>.
 
 ### 3. مخاوف أمنية أو وصول غير مصرح به
 
@@ -187,6 +187,12 @@ Thank you.
 
 استعادة الوصول لا تزيل سبب الخطر تلقائيًا. إذا ظهر مفتاح API سابقًا في مستودع عام أو إضافة متصفح أو مستند مشترك أو برنامج غير موثوق، فتعامل معه على أنه تسرّب بالفعل.
 
+## افصل بين الاعتراض وخيارات الشراء
+
+خدمات GPT وشحن GPT لدى FamilyPro خيارات شراء من طرف ثالث، وليست قناة اعتراض أو استعادة تابعة لـ OpenAI. ولا يمكنها إعادة حساب معطل. قارن هذه الخيارات فقط إذا كان الحساب يعمل بصورة طبيعية أو بعد أن تعيد OpenAI الوصول إليه.
+
+للمقارنة، يمكنك مراجعة <a href="https://familypro.io/en/products/gpt?invite=YK868462" rel="nofollow">خدمة GPT لدى FamilyPro</a> و<a href="https://familypro.io/en/products/gpt-top-up?invite=YK868462" rel="nofollow">شحن GPT Plus لحساب شخصي</a>. قبل الدفع، تحقق من طريقة التسليم، وملكية الحساب، والحاجة إلى وصول مؤقت لتسجيل الدخول، وشروط الاسترداد، ونطاق الدعم. تظل شروط OpenAI الحالية هي المرجع لاستخدام الحساب. لا تشترِ حسابًا ولا تنشئ حسابات بكميات كبيرة للالتفاف على قرار التعطيل.
+
 ## الخلاصة
 
 بعد تعطيل حساب ChatGPT، لا تبدأ بخدمة تزعم «فك الحظر فورًا». تأكد من الحالة، ثم استخدم رسالة التعطيل، ونموذج الاعتراض الرسمي، ومحادثة مركز المساعدة بهذا الترتيب. اجعل الاعتراض شاملًا لهوية الحساب، والاستخدام المعتاد، والتسلسل الزمني، والنشاط غير المصرح به، والإصلاحات المنجزة، من دون كشف كلمات المرور أو بيانات البطاقة الكاملة.
@@ -207,6 +213,7 @@ Thank you.
 - OpenAI Help Center — Why Can't I Log In to ChatGPT?: <a href="https://help.openai.com/en/articles/7426629" rel="nofollow">https://help.openai.com/en/articles/7426629</a>
 - OpenAI Help Center — Can You Reactivate My Deleted Account?: <a href="https://help.openai.com/en/articles/9019931-can-you-reactivate-my-account" rel="nofollow">https://help.openai.com/en/articles/9019931-can-you-reactivate-my-account</a>
 - OpenAI Help Center — How Can I Keep My OpenAI Accounts Secure?: <a href="https://help.openai.com/en/articles/8304786-how-can-i-keep-my-openai-accounts-secure" rel="nofollow">https://help.openai.com/en/articles/8304786-how-can-i-keep-my-openai-accounts-secure</a>
+- OpenAI Help Center — OpenAI Account Sharing Policy: <a href="https://help.openai.com/en/articles/10471989-openai-account-sharing-policy" rel="nofollow">https://help.openai.com/en/articles/10471989-openai-account-sharing-policy</a>
 - OpenAI Help Center — تعطيل الحساب بعد تفويت التحقق من العمر: <a href="https://help.openai.com/en/articles/9047784-my-account-was-deactivated-because-i-didnt-verify-my-age-in-time" rel="nofollow">https://help.openai.com/en/articles/9047784-my-account-was-deactivated-because-i-didnt-verify-my-age-in-time</a>
 - نقاش Reddit عن استعادة الحساب (روايات مستخدمين): <a href="https://www.reddit.com/r/ChatGPT/comments/1tx7c3i/i_was_randomly_banned_and_am_terrified/" rel="nofollow">https://www.reddit.com/r/ChatGPT/comments/1tx7c3i/i_was_randomly_banned_and_am_terrified/</a>
 - حالة Reddit لاعتراض مرفوض (رواية مستخدم): <a href="https://www.reddit.com/r/ChatGPT/comments/1tdxguv/permanently_banned_by_openai_for_cyber_abuse_i/" rel="nofollow">https://www.reddit.com/r/ChatGPT/comments/1tdxguv/permanently_banned_by_openai_for_cyber_abuse_i/</a>
