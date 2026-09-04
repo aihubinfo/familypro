@@ -8,7 +8,7 @@ summary: "A sign-in method, an extra login challenge, and identity or age verifi
 category: AI Tools
 coverImage: /blog-covers/chatgpt-login-verification-shared-account-friction-guide-2026.webp
 pubDate: 2026-08-21
-updatedDate: 2026-08-21
+updatedDate: 2026-09-04
 author: Huge
 service: General
 tags:
@@ -23,7 +23,7 @@ draft: false
 
 Some people enter ChatGPT with one tap on Google. Others are asked for an email code at every login. A user may enter the same email address and land in what looks like a new account with no subscription or chat history. People using a shared account can face another layer of friction: they must ask the account owner for a code, only to see a suspicious-activity warning after they finally get in.
 
-Those symptoms are often treated as one problem, but they belong to at least three different layers: **the method used to sign in, an extra security challenge during sign-in, and a separate identity or age-verification requirement**. This guide was checked on **August 21, 2026** against OpenAI Help Center articles, the account-sharing policy, and public user reports.
+Those symptoms are often treated as one problem, but they belong to at least three different layers: **the method used to sign in, an extra security challenge during sign-in, and a separate identity or age-verification requirement**. This guide was checked on **September 4, 2026** against OpenAI Help Center articles, the account-sharing policy, and public user reports.
 
 The short answer is important: OpenAI allows one person to use their account on multiple devices, but an individual account is intended for the person who created it. OpenAI does not allow people to share account credentials. Repeated code requests, session conflicts, and suspicious-activity alerts on rented or shared accounts are therefore not just browser bugs. They reflect a basic conflict between credential sharing and a single-user account model.
 
@@ -240,7 +240,7 @@ Shared accounts are different. Multiple people, locations, devices, and verifica
 
 - FamilyPro — ChatGPT service (third-party page): <a href="https://familypro.io/en/products/gpt?invite=YK868462" rel="nofollow">Open the ChatGPT service page</a>
 - FamilyPro — ChatGPT Top-up (third-party page): <a href="https://familypro.io/en/products/gpt-top-up?invite=YK868462" rel="nofollow">Open the ChatGPT Top-up page</a>
-- FamilyPro — ChatGPT Pro Top-up (third-party page): <a href="https://familypro.io/en/products/gpt-pro-top-up" rel="nofollow">Open the ChatGPT Pro Top-up page</a>
+- FamilyPro — ChatGPT Pro Top-up (third-party page): <a href="https://familypro.io/en/products/gpt-pro-top-up?invite=YK868462" rel="nofollow">Open the ChatGPT Pro Top-up page</a>
 - OpenAI Help Center — Why Am I Being Asked to Verify My Login?: <a href="https://help.openai.com/en/articles/9889414-why-am-i-being-asked-to-verify-my-login" rel="nofollow">https://help.openai.com/en/articles/9889414-why-am-i-being-asked-to-verify-my-login</a>
 - OpenAI Help Center — Why Can't I Log In to ChatGPT?: <a href="https://help.openai.com/en/articles/7426629" rel="nofollow">https://help.openai.com/en/articles/7426629</a>
 - OpenAI Help Center — Can I Change How I Log Into My Account?: <a href="https://help.openai.com/en/articles/4936824-can-i-log-into-my-account-authentication-method" rel="nofollow">https://help.openai.com/en/articles/4936824-can-i-log-into-my-account-authentication-method</a>

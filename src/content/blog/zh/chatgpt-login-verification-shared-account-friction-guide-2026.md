@@ -8,7 +8,7 @@ summary: 登录方式、额外安全验证和身份/年龄验证不是一回事�
 category: AI工具
 coverImage: /blog-covers/chatgpt-login-verification-shared-account-friction-guide-2026.webp
 pubDate: 2026-08-21
-updatedDate: 2026-08-21
+updatedDate: 2026-09-04
 author: Huge
 service: General
 tags:
@@ -23,7 +23,7 @@ draft: false
 
 ChatGPT 登录时，有人只要点一下 Google 就能进入，有人却反复收到邮箱验证码；有人明明输入了同一个邮箱，却看到一个没有订阅、没有历史记录的“新账号”；合租账号用户还可能每天找号主拿验证码，刚登录又遇到异常活动提醒。
 
-这些问题经常被混在一起，其实至少涉及三层机制：**用什么身份进入账号、登录时是否需要额外验证、账号是否还要完成人工身份或年龄验证**。本文在 **2026 年 8 月 21 日**核对了 OpenAI 帮助中心、账号共享政策与公开用户讨论，下面先盘点官方支持的方式，再给出可以按顺序执行的解决方案。
+这些问题经常被混在一起，其实至少涉及三层机制：**用什么身份进入账号、登录时是否需要额外验证、账号是否还要完成人工身份或年龄验证**。本文在 **2026 年 9 月 4 日**核对了 OpenAI 帮助中心、账号共享政策与公开用户讨论，下面先盘点官方支持的方式，再给出可以按顺序执行的解决方案。
 
 先说结论：OpenAI 允许同一个人从多台设备使用自己的账号，但个人账号是给创建者本人使用的，官方不允许多人共享登录凭据。合租账号的频繁要码、登录冲突和异常活动提醒，不只是浏览器故障，而是共享模式与单用户账号模型之间的结构性摩擦。
 
@@ -240,7 +240,7 @@ ChatGPT Business 的正确协作模型是给成员各自的账号和席位。每
 
 - FamilyPro — ChatGPT 服务说明（第三方页面）：<a href="https://familypro.io/en/products/gpt?invite=YK868462" rel="nofollow">打开 ChatGPT 服务页</a>
 - FamilyPro — ChatGPT Top-up（第三方页面）：<a href="https://familypro.io/en/products/gpt-top-up?invite=YK868462" rel="nofollow">打开 ChatGPT Top-up 页面</a>
-- FamilyPro — ChatGPT Pro Top-up（第三方页面）：<a href="https://familypro.io/en/products/gpt-pro-top-up" rel="nofollow">打开 ChatGPT Pro Top-up 页面</a>
+- FamilyPro — ChatGPT Pro Top-up（第三方页面）：<a href="https://familypro.io/en/products/gpt-pro-top-up?invite=YK868462" rel="nofollow">打开 ChatGPT Pro Top-up 页面</a>
 - OpenAI Help Center — Why Am I Being Asked to Verify My Login?：<a href="https://help.openai.com/en/articles/9889414-why-am-i-being-asked-to-verify-my-login" rel="nofollow">https://help.openai.com/en/articles/9889414-why-am-i-being-asked-to-verify-my-login</a>
 - OpenAI Help Center — Why Can't I Log In to ChatGPT?：<a href="https://help.openai.com/en/articles/7426629" rel="nofollow">https://help.openai.com/en/articles/7426629</a>
 - OpenAI Help Center — Can I Change How I Log Into My Account?：<a href="https://help.openai.com/en/articles/4936824-can-i-log-into-my-account-authentication-method" rel="nofollow">https://help.openai.com/en/articles/4936824-can-i-log-into-my-account-authentication-method</a>

@@ -8,7 +8,7 @@ summary: "طريقة تسجيل الدخول، والتحقق الأمني ال�
 category: أدوات الذكاء الاصطناعي
 coverImage: /blog-covers/chatgpt-login-verification-shared-account-friction-guide-2026.webp
 pubDate: 2026-08-21
-updatedDate: 2026-08-21
+updatedDate: 2026-09-04
 author: Huge
 service: عام
 tags:
@@ -23,7 +23,7 @@ draft: false
 
 يدخل بعض المستخدمين إلى ChatGPT بضغطة واحدة عبر Google، بينما يُطلب من آخرين إدخال رمز يصل إلى البريد في كل مرة. وقد يكتب المستخدم البريد نفسه ثم يجد حسابًا فارغًا بلا اشتراك أو محادثات سابقة. أما مستخدم الحساب المشترك فقد ينتظر مالك الحساب كي يرسل الرمز، ثم يواجه تنبيهًا عن نشاط مريب بعد الدخول مباشرة.
 
-هذه ليست مشكلة واحدة. هناك ثلاث طبقات مختلفة على الأقل: **طريقة الدخول الأساسية، وتحدي أمني إضافي أثناء الدخول، والتحقق المنفصل من الهوية أو العمر**. تمت مراجعة هذا الدليل في **21 أغسطس 2026** بالاستناد إلى مركز مساعدة OpenAI، وسياسة مشاركة الحسابات، وتجارب عامة نشرها مستخدمون.
+هذه ليست مشكلة واحدة. هناك ثلاث طبقات مختلفة على الأقل: **طريقة الدخول الأساسية، وتحدي أمني إضافي أثناء الدخول، والتحقق المنفصل من الهوية أو العمر**. تمت مراجعة هذا الدليل في **4 سبتمبر 2026** بالاستناد إلى مركز مساعدة OpenAI، وسياسة مشاركة الحسابات، وتجارب عامة نشرها مستخدمون.
 
 الخلاصة الأساسية: تسمح OpenAI للشخص نفسه باستخدام حسابه على عدة أجهزة، لكن الحساب الفردي مخصص لمن أنشأه، ولا تسمح السياسة بمشاركة بيانات الدخول بين عدة أشخاص. لذلك فإن تكرار طلب الرموز وتعارض الجلسات وتنبيهات النشاط المريب في الحسابات المؤجرة أو المشتركة ليس مجرد خلل في المتصفح، بل احتكاك ناتج عن استخدام حساب فردي كأنه مقعد جماعي.
 
@@ -240,7 +240,7 @@ draft: false
 
 - FamilyPro — خدمة ChatGPT (صفحة خارجية): <a href="https://familypro.io/en/products/gpt?invite=YK868462" rel="nofollow">فتح صفحة خدمة ChatGPT</a>
 - FamilyPro — ChatGPT Top-up (صفحة خارجية): <a href="https://familypro.io/en/products/gpt-top-up?invite=YK868462" rel="nofollow">فتح صفحة ChatGPT Top-up</a>
-- FamilyPro — ChatGPT Pro Top-up (صفحة خارجية): <a href="https://familypro.io/en/products/gpt-pro-top-up" rel="nofollow">فتح صفحة ChatGPT Pro Top-up</a>
+- FamilyPro — ChatGPT Pro Top-up (صفحة خارجية): <a href="https://familypro.io/en/products/gpt-pro-top-up?invite=YK868462" rel="nofollow">فتح صفحة ChatGPT Pro Top-up</a>
 - OpenAI Help Center — Why Am I Being Asked to Verify My Login?: <a href="https://help.openai.com/en/articles/9889414-why-am-i-being-asked-to-verify-my-login" rel="nofollow">https://help.openai.com/en/articles/9889414-why-am-i-being-asked-to-verify-my-login</a>
 - OpenAI Help Center — Why Can't I Log In to ChatGPT?: <a href="https://help.openai.com/en/articles/7426629" rel="nofollow">https://help.openai.com/en/articles/7426629</a>
 - OpenAI Help Center — Can I Change How I Log Into My Account?: <a href="https://help.openai.com/en/articles/4936824-can-i-log-into-my-account-authentication-method" rel="nofollow">https://help.openai.com/en/articles/4936824-can-i-log-into-my-account-authentication-method</a>

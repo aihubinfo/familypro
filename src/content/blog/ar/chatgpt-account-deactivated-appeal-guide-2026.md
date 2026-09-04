@@ -8,7 +8,7 @@ summary: "حدّد أولًا ما إذا كان الحساب معطّلًا ف�
 category: أدوات الذكاء الاصطناعي
 coverImage: /blog-covers/chatgpt-account-deactivated-appeal-guide-2026.webp
 pubDate: 2026-08-21
-updatedDate: 2026-08-28
+updatedDate: 2026-09-04
 author: Huge
 service: عام
 tags:
@@ -22,7 +22,7 @@ draft: false
 
 عندما يسجّل ChatGPT خروجك فجأة ويظهر أن الحساب حُذف أو عُطّل، فأسوأ بداية هي إرسال الشكوى نفسها في كل مكان أو نسخ صيغة من الإنترنت تدّعي أنها «تضمن فك الحظر». الخطوة الصحيحة هي تحديد الحالة أولًا: **تعطيل فعلي للحساب، أو عدم اكتمال التحقق من الهوية أو العمر، أو تعليق وقائي بسبب اشتباه في اختراق، أو مشكلة عادية في تسجيل الدخول**.
 
-تمت مراجعة هذا الدليل في **28 أغسطس 2026** بالاستناد إلى مركز مساعدة OpenAI، وشروط الاستخدام، وإرشادات أمان الحساب، وتجارب عامة نشرها مستخدمون. لا تنشر OpenAI نسبة نجاح للاعتراضات ولا تضمن مدة ثابتة للرد. لذلك لا تضمن الخطوات التالية استعادة الحساب، لكنها تساعدك على استخدام القناة الصحيحة وتقديم هوية الحساب والتسلسل الزمني والأدلة بشكل يمكن مراجعته.
+تمت مراجعة هذا الدليل في **4 سبتمبر 2026** بالاستناد إلى مركز مساعدة OpenAI، وشروط الاستخدام، وإرشادات أمان الحساب، وتجارب عامة نشرها مستخدمون. لا تنشر OpenAI نسبة نجاح للاعتراضات ولا تضمن مدة ثابتة للرد. لذلك لا تضمن الخطوات التالية استعادة الحساب، لكنها تساعدك على استخدام القناة الصحيحة وتقديم هوية الحساب والتسلسل الزمني والأدلة بشكل يمكن مراجعته.
 
 ## تأكد أولًا: تعذر الدخول لا يعني دائمًا أن الحساب محظور
 
@@ -203,7 +203,7 @@ Thank you.
 
 - [FamilyPro — الوصول إلى ChatGPT (رابط دعوة؛ ليست صفحة رسمية لـ OpenAI)](https://familypro.io/en/products/gpt?invite=YK868462)
 - [FamilyPro — شحن GPT Plus لحساب شخصي (خدمة طرف ثالث)](https://familypro.io/en/products/gpt-top-up?invite=YK868462)
-- [FamilyPro — شحن GPT Pro لحساب شخصي (خدمة طرف ثالث)](https://familypro.io/en/products/gpt-pro-top-up)
+- [FamilyPro — شحن GPT Pro لحساب شخصي (خدمة طرف ثالث)](https://familypro.io/en/products/gpt-pro-top-up?invite=YK868462)
 - OpenAI Help Center — Why Was My OpenAI Account Deactivated?: <a href="https://help.openai.com/en/articles/10562188-why-was-my-openai-account-deactivated" rel="nofollow">https://help.openai.com/en/articles/10562188-why-was-my-openai-account-deactivated</a>
 - OpenAI Help Center: <a href="https://help.openai.com/" rel="nofollow">https://help.openai.com/</a>
 - OpenAI — Submit an Appeal or Report Unauthorized Activity: <a href="https://openai.com/form/appeal/" rel="nofollow">https://openai.com/form/appeal/</a>

@@ -8,7 +8,7 @@ summary: "ログイン方式、追加のセキュリティ認証、本人・年�
 category: AIツール
 coverImage: /blog-covers/chatgpt-login-verification-shared-account-friction-guide-2026.webp
 pubDate: 2026-08-21
-updatedDate: 2026-08-21
+updatedDate: 2026-09-04
 author: Huge
 service: General
 tags:
@@ -23,7 +23,7 @@ draft: false
 
 ChatGPTにGoogleボタンだけで入れる人がいる一方、ログインするたびにメール認証コードを求められる人もいます。同じメールアドレスを入力したはずなのに、契約も履歴もない別アカウントが開くこともあります。共有アカウントでは、所有者に認証コードを聞いてようやく入れた直後に、不審なアクティビティの警告が出るケースもあります。
 
-これらは一つの不具合ではありません。少なくとも、**アカウントに入るためのログイン方式、ログイン時に追加されるセキュリティ認証、本人確認・年齢確認**という三つの層を分けて考える必要があります。本記事は **2026年8月21日** 時点で、OpenAIヘルプセンター、アカウント共有ポリシー、公開されているユーザー報告を照合しています。
+これらは一つの不具合ではありません。少なくとも、**アカウントに入るためのログイン方式、ログイン時に追加されるセキュリティ認証、本人確認・年齢確認**という三つの層を分けて考える必要があります。本記事は **2026年9月4日** 時点で、OpenAIヘルプセンター、アカウント共有ポリシー、公開されているユーザー報告を照合しています。
 
 先に結論を示すと、OpenAIは同じ本人が複数端末で自分のアカウントを使うことを認めていますが、個人アカウントは作成者本人が使うものです。複数人による認証情報の共有は認められていません。共有・合租アカウントで認証コード、セッション競合、不審なアクティビティ警告が続くのは、単なるブラウザ不具合ではなく、単一ユーザー向けアカウントを複数人で使うことによる構造的な摩擦です。
 
@@ -240,7 +240,7 @@ ChatGPTのログイン問題は、どの層で止まっているかを見分け�
 
 - FamilyPro — ChatGPTサービス（第三者ページ）：<a href="https://familypro.io/en/products/gpt?invite=YK868462" rel="nofollow">ChatGPTサービスページを開く</a>
 - FamilyPro — ChatGPT Top-up（第三者ページ）：<a href="https://familypro.io/en/products/gpt-top-up?invite=YK868462" rel="nofollow">ChatGPT Top-upページを開く</a>
-- FamilyPro — ChatGPT Pro Top-up（第三者ページ）：<a href="https://familypro.io/en/products/gpt-pro-top-up" rel="nofollow">ChatGPT Pro Top-upページを開く</a>
+- FamilyPro — ChatGPT Pro Top-up（第三者ページ）：<a href="https://familypro.io/en/products/gpt-pro-top-up?invite=YK868462" rel="nofollow">ChatGPT Pro Top-upページを開く</a>
 - OpenAI Help Center — Why Am I Being Asked to Verify My Login?：<a href="https://help.openai.com/en/articles/9889414-why-am-i-being-asked-to-verify-my-login" rel="nofollow">https://help.openai.com/en/articles/9889414-why-am-i-being-asked-to-verify-my-login</a>
 - OpenAI Help Center — Why Can't I Log In to ChatGPT?：<a href="https://help.openai.com/en/articles/7426629" rel="nofollow">https://help.openai.com/en/articles/7426629</a>
 - OpenAI Help Center — Can I Change How I Log Into My Account?：<a href="https://help.openai.com/en/articles/4936824-can-i-log-into-my-account-authentication-method" rel="nofollow">https://help.openai.com/en/articles/4936824-can-i-log-into-my-account-authentication-method</a>

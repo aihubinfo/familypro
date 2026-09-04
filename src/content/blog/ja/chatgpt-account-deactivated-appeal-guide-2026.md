@@ -8,7 +8,7 @@ summary: 停止処分、本人・年齢確認の未完了、乗っ取り対策�
 category: AIツール
 coverImage: /blog-covers/chatgpt-account-deactivated-appeal-guide-2026.webp
 pubDate: 2026-08-21
-updatedDate: 2026-08-28
+updatedDate: 2026-09-04
 author: Huge
 service: General
 tags:
@@ -22,7 +22,7 @@ draft: false
 
 ChatGPTから突然ログアウトされ、「アカウントが削除または停止された」と表示されても、最初から同じ問い合わせを何度も送ったり、ネット上の「必ず通る申立て文」をコピーしたりするのは得策ではありません。まず確認すべきなのは、**本当のアカウント停止、本人・年齢確認の未完了、乗っ取りの疑いによる保護目的の一時停止、通常のログイン障害**のどれに当たるかです。
 
-本記事は **2026年8月28日** 時点で、OpenAIヘルプセンター、利用規約、アカウント安全ガイド、公開されているユーザー報告を照合しています。OpenAIは申立ての成功率や固定の回答期限を公表していません。以下の手順は復旧を保証するものではありませんが、正しい窓口に申請し、担当者が確認できるアカウント情報・時系列・証拠をそろえる助けになります。
+本記事は **2026年9月4日** 時点で、OpenAIヘルプセンター、利用規約、アカウント安全ガイド、公開されているユーザー報告を照合しています。OpenAIは申立ての成功率や固定の回答期限を公表していません。以下の手順は復旧を保証するものではありませんが、正しい窓口に申請し、担当者が確認できるアカウント情報・時系列・証拠をそろえる助けになります。
 
 ## まず確認：ログインできない＝アカウント停止とは限らない
 
@@ -203,7 +203,7 @@ ChatGPTアカウントが停止されたら、「即時解除」をうたうサ�
 
 - [FamilyPro — ChatGPTサービス（招待リンク、OpenAI公式ページではありません）](https://familypro.io/en/products/gpt?invite=YK868462)
 - [FamilyPro — 個人アカウント向けGPT Plusチャージ（第三者サービス）](https://familypro.io/en/products/gpt-top-up?invite=YK868462)
-- [FamilyPro — 個人アカウント向けGPT Proチャージ（第三者サービス）](https://familypro.io/en/products/gpt-pro-top-up)
+- [FamilyPro — 個人アカウント向けGPT Proチャージ（第三者サービス）](https://familypro.io/en/products/gpt-pro-top-up?invite=YK868462)
 - OpenAI Help Center — Why Was My OpenAI Account Deactivated?：<a href="https://help.openai.com/en/articles/10562188-why-was-my-openai-account-deactivated" rel="nofollow">https://help.openai.com/en/articles/10562188-why-was-my-openai-account-deactivated</a>
 - OpenAI Help Center：<a href="https://help.openai.com/" rel="nofollow">https://help.openai.com/</a>
 - OpenAI — Submit an Appeal or Report Unauthorized Activity：<a href="https://openai.com/form/appeal/" rel="nofollow">https://openai.com/form/appeal/</a>

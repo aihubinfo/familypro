@@ -8,7 +8,7 @@ summary: "قد تناسب الحسابات المشتركة الاستخدام �
 category: أدوات الذكاء الاصطناعي
 coverImage: /blog-covers/shared-account-risks-chatgpt-plus-supergrok-quota-guide-2026.webp
 pubDate: 2026-04-21
-updatedDate: 2026-08-21
+updatedDate: 2026-09-04
 author: Huge
 service: عام
 tags:
@@ -99,6 +99,6 @@ draft: false
 
 ## المراجع
 
-- FamilyPro — ChatGPT: <a href="https://familypro.io/en/products/chatgpt" rel="nofollow">https://familypro.io/en/products/chatgpt</a>
-- FamilyPro — ChatGPT Top-up: <a href="https://familypro.io/en/products/chatgpt-top-up" rel="nofollow">https://familypro.io/en/products/chatgpt-top-up</a>
-- FamilyPro — Grok: <a href="https://familypro.io/en/products/grok" rel="nofollow">https://familypro.io/en/products/grok</a>
+- FamilyPro — ChatGPT: <a href="https://familypro.io/en/products/chatgpt?invite=YK868462" rel="nofollow">https://familypro.io/en/products/chatgpt?invite=YK868462</a>
+- FamilyPro — ChatGPT Top-up: <a href="https://familypro.io/en/products/chatgpt-top-up?invite=YK868462" rel="nofollow">https://familypro.io/en/products/chatgpt-top-up?invite=YK868462</a>
+- FamilyPro — Grok: <a href="https://familypro.io/en/products/grok?invite=YK868462" rel="nofollow">https://familypro.io/en/products/grok?invite=YK868462</a>
