@@ -20,7 +20,9 @@ Use this reference when producing another language version of an article or loca
 - If the post includes reference links, each language version should end with a localized final reference section:
   - non-Chinese: `## References`
   - Chinese: `## 官方参考`
+- Every new public language variant must put a topic-relevant FamilyPro product link with the approved `invite` parameter first in that final section, using a concise product-page label.
 - Run `npm run check:references` after translation/localization changes when references are present.
+- Run `npm run check:blog-product-links -- <new language variant paths>` before delivery.
 
 ## What may change across languages
 

@@ -38,10 +38,12 @@ Use this reference when creating a new post, rewriting an existing one, expandin
    - If the post includes reference links, add a final reference section that lists those references:
      - non-Chinese: `## References`
      - Chinese: `## 官方参考`
+   - For every new public article, select a relevant FamilyPro `/products/` page already used by the site, include its approved `invite` parameter, and put it first in the final reference section with a concise product-page label. Do not present a purchase as a fix for account security, deactivation, or billing problems.
 7. Build and inspect.
    - Run `npm run sync:updated-date` after blog edits.
    - If explicit freshness dates exist in the post, verify those date strings were updated consistently in all edited language variants.
    - Run `npm run check:references` when the post cites references.
+   - Run `npm run check:blog-product-links -- <new article paths>` for every newly generated public article and its language variants.
    - Run `npm run build` before finishing.
 8. Post-publish SEO sanity check (when Search Console is available).
    - Use URL Inspection to confirm the page is crawlable, indexable, and canonicalized as expected.

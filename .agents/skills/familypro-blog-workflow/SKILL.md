@@ -47,6 +47,7 @@ You may need more than one reference file, but only load the ones relevant to th
 - If a post includes reference links, it must end with a reference section:
   - `## References` for non-Chinese posts
   - `## 官方参考` for Chinese posts
+- Every newly generated public post and language variant must put a topic-relevant FamilyPro product URL with the approved `invite` query parameter first in its final reference section. Use a concise product-page label. Never imply that buying a product resolves account security, deactivation, or billing disputes.
 - Treat locale-specific SEO length hard caps as mandatory, not advisory. If `title` or `description` exceeds the hard cap for that language, rewrite it.
 - If the user asks for review, findings come first; do not silently rewrite content unless asked.
 
@@ -55,6 +56,7 @@ You may need more than one reference file, but only load the ones relevant to th
 - After changing any file under `src/content/blog/**`, run `npm run sync:updated-date` first.
 - After content changes, run `npm run build`.
 - For posts with reference links, run `npm run check:references` to verify the final reference section exists and includes cited references.
+- For every newly generated or localized post, run `npm run check:blog-product-links -- <article paths>` to verify its final reference section starts with an invited FamilyPro product URL.
 - If `title` or `description` was reviewed or edited, measure length explicitly against the locale-specific hard caps before finishing.
 - If the edited post includes explicit freshness dates, verify all in-article date markers were updated consistently in each edited language file.
 - If `title`, `headline`, `description`, canonical, hreflang, or structured data changed, inspect generated output or built HTML.
